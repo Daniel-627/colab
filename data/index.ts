@@ -78,3 +78,16 @@ export const services = [
     details: "Experience the power of both design and development. I combine stunning visuals with intuitive user experiences to create websites that engage and convert."
   },
 ];
+
+export const companies = [
+  { name: 'company', logo: '/logos/company1.png',index: 1, },
+  { name: 'company', logo: '/logos/company2.png',index: 2, },
+  { name: 'company', logo: '/logos/company3.png',index: 3, },
+  { name: 'JavaScript', logo: '/logos/company4.png',index: 4, },
+  { name: 'Framer', logo: '/logos/company5.png',index: 5, },
+  { name: 'HTML', logo: '/logos/company6.png',index: 6, },
+  { name: 'WebFlow', logo: '/logos/company7.png',index: 7, },
+  { name: 'Wordpress', logo: '/logos/company8.png',index: 8, },
+  { name: 'CSS', logo: '/logos/company9.png',index: 9, },
+  { name: 'CSS', logo: '/logos/company10.png',index: 10, },
+]

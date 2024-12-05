@@ -4,6 +4,6 @@ type Props = {}
 
 export default function Navbar({}: Props) {
   return (
-    <div>Navbar</div>
+    <div className='mx-auto'>Navbar</div>
   )
 }

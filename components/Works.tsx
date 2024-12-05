@@ -8,7 +8,7 @@ type Props = {}
 
 export default function Works({}: Props) {
   return (
-    <div className='py-16'>
+    <div className='py-16 mx-auto'>
       <div className='text-9xl py-2'>Works</div>
       <div className='grid grid-cols-3 space-x-4'>
           {projects.map((project) => (

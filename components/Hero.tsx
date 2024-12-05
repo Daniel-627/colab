@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = () => {
   return (
     <div
-      className="relative w-full h-[300vh] bg-center bg-no-repeat"
+      className="relative w-full h-[300vh] bg-center bg-no-repeat mx-auto"
       style={{
         backgroundImage: "url('/img7.jpg')",
         backgroundSize: "cover",
