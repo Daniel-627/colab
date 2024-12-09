@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 
 const CreativeProcess = () => {
   const steps = [
@@ -63,21 +62,23 @@ const CreativeProcess = () => {
         >
           Our Creative Process
         </motion.h2>
-        <div className="flex flex-col gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
               className="relative bg-white rounded-lg shadow-md p-6"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-blue-500 rounded-full"></div>
-              <div className="ml-10">
-                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+              <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center w-10 h-10 bg-blue-500 text-white font-bold rounded-full">
+                  {index + 1}
+                </div>
+                <h3 className="text-xl font-semibold ml-4">{step.title}</h3>
               </div>
+              <p className="text-gray-600">{step.description}</p>
             </motion.div>
           ))}
         </div>
