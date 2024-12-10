@@ -5,54 +5,29 @@ import { motion } from "framer-motion";
 const CreativeProcess = () => {
   const steps = [
     {
-      title: "Client Onboarding and Briefing",
+      title: "Client Onboarding",
       description:
-        "Understand the client’s needs, gather requirements, and create a project brief detailing objectives and scope.",
+        "We begin by understanding your needs, gathering requirements, and creating a clear project brief.",
     },
     {
-      title: "Research and Strategy",
+      title: "Research & Strategy",
       description:
-        "Analyze the market, target audience, and competitors to develop a strategic plan aligned with the client’s goals.",
+        "We analyze the market, audience, and competitors to develop a tailored strategic plan.",
     },
     {
-      title: "Ideation and Brainstorming",
+      title: "Design & Development",
       description:
-        "Collaborate in creative sessions to generate ideas, mood boards, and prototypes for early feedback.",
+        "We craft stunning visuals and build solutions that align perfectly with your vision.",
     },
     {
-      title: "Design and Development",
+      title: "Launch & Support",
       description:
-        "Craft visuals, content, and assets while integrating the creative vision into tangible deliverables.",
-    },
-    {
-      title: "Client Review and Feedback",
-      description:
-        "Present drafts for client review and refine the outputs based on their feedback.",
-    },
-    {
-      title: "Implementation and Execution",
-      description:
-        "Launch campaigns, manage media placement, and coordinate any related events or activations.",
-    },
-    {
-      title: "Monitoring and Optimization",
-      description:
-        "Track performance, analyze metrics, and optimize strategies to ensure maximum impact.",
-    },
-    {
-      title: "Delivery and Handover",
-      description:
-        "Provide final deliverables and supporting documentation for client use and maintenance.",
-    },
-    {
-      title: "Post-Project Support",
-      description:
-        "Offer training, follow-up services, and resources to ensure the client’s long-term success.",
+        "We ensure a successful launch, provide training, and offer post-project support for long-term success.",
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-100 text-gray-900">
+    <section className="py-32 bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-gray-100">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-12"
@@ -66,19 +41,19 @@ const CreativeProcess = () => {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="relative bg-white rounded-lg shadow-md p-6"
+              className="relative bg-[#ff5c00] rounded-lg shadow-lg p-8"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.6, delay: index * 0.6 }}
+              transition={{ duration: 1.6, delay: index * 0.5 }}
             >
-              <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-10 h-10 bg-blue-500 text-white font-bold rounded-full">
+              <div className="flex items-center mb-6">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#ff073a] text-white font-bold text-lg rounded-full">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-semibold ml-4">{step.title}</h3>
+                <h3 className="text-2xl font-semibold ml-4">{step.title}</h3>
               </div>
-              <p className="text-gray-600">{step.description}</p>
+              <p className="text-gray-100 leading-relaxed mt-4">{step.description}</p>
             </motion.div>
           ))}
         </div>

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
@@ -10,14 +10,12 @@ type Props = {};
 export default function Companies({}: Props) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.2, // Trigger when 20% of the section is visible
+    threshold: 0.1,
   });
 
   useEffect(() => {
     if (inView) {
       controls.start('visible');
-    } else {
-      controls.start('hidden');
     }
   }, [controls, inView]);
 
@@ -26,7 +24,7 @@ export default function Companies({}: Props) {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.8,
+        staggerChildren: 0.2, // Faster stagger for better flow
       },
     },
   };
@@ -37,7 +35,7 @@ export default function Companies({}: Props) {
   };
 
   return (
-    <div ref={ref} className="py-32">
+    <div ref={ref} className="py-16 md:py-32">
       <div className="container mx-auto px-6 lg:px-20">
         {/* Section Heading */}
         <motion.div
@@ -48,30 +46,33 @@ export default function Companies({}: Props) {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          transition={{ duration: 1.6 }}
+          transition={{ duration: 1.2 }}
+          viewport={{ once: true }}
         >
-          <p className="mt-4">
+          <h2 className="text-2xl md:text-4xl font-bold">Our Partners</h2>
+          <p className="mt-4 text-sm md:text-base">
             We are proud to collaborate with some of the most innovative companies in the industry.
           </p>
         </motion.div>
 
         {/* Companies Grid */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 items-center"
           initial="hidden"
           animate={controls}
           variants={containerVariants}
+          viewport={{ once: true }}
         >
           {companies.map((company) => (
             <motion.div
               key={company.index}
-              className="bg-transparent p-6 rounded-lg text-center border-2"
+              className="bg-transparent p-4 md:p-6 rounded-lg text-center border-2 border-gray-300"
               variants={itemVariants}
             >
               <img
                 src={company.logo}
                 alt={company.name}
-                className="h-8 w-auto mx-auto"
+                className="h-6 md:h-8 w-auto mx-auto"
                 style={{ backgroundColor: 'transparent' }}
               />
             </motion.div>
