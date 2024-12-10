@@ -4,96 +4,88 @@ import EmailForm from './EmailForm';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-100 py-10">
-      <div className="container mx-auto px-4 flex flex-col md:grid md:grid-cols-12 gap-8">
-        
+    <footer className="bg-gray-900 text-gray-100 py-12">
+      <div className="container mx-auto px-6 lg:px-20">
+        <div className="grid md:grid-cols-12 gap-12">
 
-        <div className='md:col-span-8 flex flex-col'>
-
-          <div className='flex flex-row justify-evenly'>
-
-            <div>
-              <img src="/logos/logo.png" alt="logo" className='h-16' />
-              <h1>Colab Kenya</h1>
+          {/* Logo and Contact Information */}
+          <div className="md:col-span-5">
+            <div className="flex items-center space-x-4">
+              <img src="/logos/logo.png" alt="logo" className="h-16" />
+              <h1 className="text-xl font-bold">Colab Kenya</h1>
             </div>
-
-            {/* Contact Information and Social Media Links */}
-            <div className="space-y-4">
+            <div className="mt-6 space-y-4">
               <h3 className="text-lg font-semibold">Contact Us</h3>
               <p>Email: <a href="mailto:info@company.com" className="hover:text-blue-400">info@company.com</a></p>
               <p>Address: 1234 Example Street, Kisumu, Kenya</p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 mt-4">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-500"
+                  className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
                 >
-                  <FaFacebookF />
+                  <FaFacebookF size={20} />
                 </a>
                 <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-500"
+                  className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
                 >
-                  <FaTwitter />
+                  <FaTwitter size={20} />
                 </a>
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-pink-500"
+                  className="text-gray-400 hover:text-pink-500 transition-colors duration-200"
                 >
-                  <FaInstagram />
+                  <FaInstagram size={20} />
                 </a>
                 <a
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-700"
+                  className="text-gray-400 hover:text-blue-700 transition-colors duration-200"
                 >
-                  <FaLinkedinIn />
+                  <FaLinkedinIn size={20} />
                 </a>
               </div>
             </div>
           </div>
-          
 
-
-          <div className="space-y-4 flex items-center  flex-col">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
-            <ul className="space-y-2 flex flex-row">
+          {/* Quick Links */}
+          <div className="md:col-span-3">
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
               <li>
-                <a href="/works" className="hover:text-blue-400">Works</a>
+                <a href="/works" className="hover:text-blue-400 transition-colors duration-200">Works</a>
               </li>
               <li>
-                <a href="/studio" className="hover:text-blue-400">Studio</a>
+                <a href="/studio" className="hover:text-blue-400 transition-colors duration-200">Studio</a>
               </li>
               <li>
-                <a href="/news" className="hover:text-blue-400">News</a>
+                <a href="/news" className="hover:text-blue-400 transition-colors duration-200">News</a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-blue-400">Contact</a>
+                <a href="/contact" className="hover:text-blue-400 transition-colors duration-200">Contact</a>
               </li>
             </ul>
           </div>
-        </div>
 
-        <div className='md:col-span-4'>
-
-          {/* Contact Form Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Get in Touch</h3>
+          {/* Email Form */}
+          <div className="md:col-span-4">
+            <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
             <EmailForm />
           </div>
+
         </div>
 
-      </div>
-
-      {/* Footer Bottom */}
-      <div className="mt-8 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} Your Company. All Rights Reserved.
+        {/* Footer Bottom */}
+        <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+          &copy; {new Date().getFullYear()} Colab Kenya. All Rights Reserved.
+        </div>
       </div>
     </footer>
   );

@@ -12,7 +12,7 @@ const Overview = () => {
         className="max-w-6xl mx-auto text-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
         <h2 className="text-4xl font-bold mb-6">Welcome to Our Website</h2>
         <p className="text-lg leading-relaxed mb-12">
@@ -28,7 +28,7 @@ const Overview = () => {
           className="relative w-full md:w-1/2"
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1.6, ease: "easeIn" }}
         >
           <Image
             src="/img1.jpg" // Replace with your image path
@@ -44,7 +44,7 @@ const Overview = () => {
           className="flex flex-col gap-6 text-center md:text-left"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           <h3 className="text-3xl font-semibold">What We Offer</h3>
           <p className="text-lg">

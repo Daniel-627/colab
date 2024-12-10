@@ -9,7 +9,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 w-full bg-transparent text-white z-50 px-8 py-4"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Left Side: Logo */}
@@ -25,7 +25,7 @@ const Navbar = () => {
           className="flex gap-8 text-lg font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          transition={{ delay: 0.8, duration: 1.6 }}
         >
           <li>
             <Link href="/work" className="hover:text-blue-500 transition">

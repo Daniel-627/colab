@@ -58,7 +58,7 @@ const CreativeProcess = () => {
           className="text-4xl font-bold text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1 }}
         >
           Our Creative Process
         </motion.h2>
@@ -70,7 +70,7 @@ const CreativeProcess = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 1.6, delay: index * 0.6 }}
             >
               <div className="flex items-center mb-4">
                 <div className="flex items-center justify-center w-10 h-10 bg-blue-500 text-white font-bold rounded-full">
