@@ -58,7 +58,7 @@ const Overview = () => {
               <div className="flex justify-center md:justify-start gap-4">
                 <Link href="/contact">
                   <motion.button
-                    className="bg-[#ff073a] hover:bg-[#ff5c00] px-6 py-3 transition-colors rounded-3xl font-semibold text-white shadow-md"
+                    className="bg-[#ff073a] hover:bg-[#ff5c00] px-6 py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

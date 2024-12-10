@@ -28,22 +28,22 @@ const Navbar = () => {
           transition={{ delay: 0.8, duration: 1.6 }}
         >
           <li>
-            <Link href="/work" className="hover:text-blue-500 transition">
+            <Link href="/work" className="hover:text-[#ff5c00] transition text-xs font-thin">
               Work
             </Link>
           </li>
           <li>
-            <Link href="/studio" className="hover:text-blue-500 transition">
+            <Link href="/studio" className="hover:text-[#ff5c00] transition text-xs font-thin">
               Studio
             </Link>
           </li>
           <li>
-            <Link href="/news" className="hover:text-blue-500 transition">
+            <Link href="/news" className="hover:text-[#ff5c00] transition text-xs font-thin">
               News
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-blue-500 transition">
+            <Link href="/contact" className="hover:text-[#ff5c00] transition text-xs font-thin">
               Contact
             </Link>
           </li>

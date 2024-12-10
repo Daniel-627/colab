@@ -60,16 +60,16 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/works" className="hover:text-blue-400 transition-colors duration-200">Works</a>
+                <a href="/works" className="hover:text-[#ff073a] transition-colors duration-200">Works</a>
               </li>
               <li>
-                <a href="/studio" className="hover:text-blue-400 transition-colors duration-200">Studio</a>
+                <a href="/studio" className="hover:text-[#ff073a] transition-colors duration-200">Studio</a>
               </li>
               <li>
-                <a href="/news" className="hover:text-blue-400 transition-colors duration-200">News</a>
+                <a href="/news" className="hover:text-[#ff073a] transition-colors duration-200">News</a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-blue-400 transition-colors duration-200">Contact</a>
+                <a href="/contact" className="hover:text-[#ff073a] transition-colors duration-200">Contact</a>
               </li>
             </ul>
           </div>

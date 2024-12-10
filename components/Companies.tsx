@@ -37,7 +37,7 @@ export default function Companies({}: Props) {
   };
 
   return (
-    <div ref={ref} className="py-16 bg-gray-900">
+    <div ref={ref} className="py-32">
       <div className="container mx-auto px-6 lg:px-20">
         {/* Section Heading */}
         <motion.div
@@ -50,8 +50,7 @@ export default function Companies({}: Props) {
           }}
           transition={{ duration: 1.6 }}
         >
-          <h2 className="text-3xl font-bold text-white">Trusted By Leading Companies</h2>
-          <p className="text-gray-400 mt-4">
+          <p className="mt-4">
             We are proud to collaborate with some of the most innovative companies in the industry.
           </p>
         </motion.div>
@@ -66,13 +65,13 @@ export default function Companies({}: Props) {
           {companies.map((company) => (
             <motion.div
               key={company.index}
-              className="bg-transparent p-6 rounded-lg text-center"
+              className="bg-transparent p-6 rounded-lg text-center border-2"
               variants={itemVariants}
             >
               <img
                 src={company.logo}
                 alt={company.name}
-                className="h-12 w-auto mx-auto"
+                className="h-8 w-auto mx-auto"
                 style={{ backgroundColor: 'transparent' }}
               />
             </motion.div>
