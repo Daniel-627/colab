@@ -31,8 +31,8 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        style={{ fontFamily: 'Zen Dots' }}
-        className={`mx-auto antialiased`}
+        style={{ fontFamily: 'Comfortaa' }}
+        className={`mx-auto font-comfortaa antialiased`}
       >
         <Navbar />
         {children}
