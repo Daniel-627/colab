@@ -31,7 +31,8 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ fontFamily: 'Zen Dots' }}
+        className={`mx-auto antialiased`}
       >
         <Navbar />
         {children}
