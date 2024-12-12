@@ -24,7 +24,7 @@ export default function Companies({}: Props) {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Faster stagger for better flow
+        staggerChildren: 0.5, // Faster stagger for better flow
       },
     },
   };
