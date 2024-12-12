@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react'
+import { motion, useInView } from "framer-motion";
 
 type Props = {}
 
@@ -14,24 +17,26 @@ export default function EmailForm({}: Props) {
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-4 py-2 rounded-md bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+              className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
             />
             <input
               type="text"
               placeholder="Subject"
-              className="w-full px-4 py-2 rounded-md bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+              className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
             />
             <textarea
               placeholder="Your Message"
               rows={4}
-              className="w-full px-4 py-2 rounded-md bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+              className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
             ></textarea>
-            <button
+            <motion.button
               type="submit"
-              className="w-full px-4 py-2 bg-[#ff073a] hover:bg-[#ff5c00] text-white rounded-md"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full px-4 py-2 bg-[#ff073a] hover:bg-[#ff5c00] text-white rounded-md transition-colors duration-300"
             >
               Send Message
-            </button>
+            </motion.button>
           </form>
     </div>
   )

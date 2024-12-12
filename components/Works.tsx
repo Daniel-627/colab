@@ -10,7 +10,7 @@ export default function Works() {
   return (
     <div className='py-16 mx-auto'>
       <motion.div
-        className='text-9xl py-2'
+        className='text-9xl py-2 mx-4'
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
@@ -21,7 +21,7 @@ export default function Works() {
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            className='border-l-2 p-4 space-y-4 rounded-lg shadow-md'
+            className='border-l-2 p-4 space-y-4'
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}

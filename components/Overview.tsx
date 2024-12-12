@@ -33,7 +33,7 @@ const Overview = () => {
           transition={{ duration: 2, ease: "easeOut" }}
         >
           <p className="text-4xl font-semibold">
-            What We Offer
+            We are
             Dedicated team of experts, talented designers and developers
             committed to helping businesses on achieving maximum online potential
           </p>
