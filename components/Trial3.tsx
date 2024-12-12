@@ -13,10 +13,10 @@ const Hero = () => {
   useEffect(() => {
     if (rellaxRef.current) {
       new Rellax('.rellax', {
-        speed: -5,
-        center: false,
-        vertical: true,
-        horizontal: false,
+        speed: -5, // Adjust speed for the parallax effect
+        center: false, // Keeps elements positioned relative to the viewport
+        vertical: true, // Enable vertical scrolling
+        horizontal: false, // Disable horizontal scrolling
       });
     }
   }, []);
@@ -33,41 +33,43 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col text-white px-6 sm:px-10 pt-[200px] sm:pt-[400px] space-y-16 sm:space-y-24">
+      <div className="relative z-10 flex flex-col text-white px-10 pt-[400px] space-y-24">
         {/* Subtitle */}
         <motion.div
-          className="flex flex-col sm:flex-row sm:justify-between"
+          className="flex flex-col md:flex-row md:justify-between"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-sm sm:text-lg md:text-2xl max-w-xl text-left rellax" data-rellax-speed="1">
+          <p className="text-lg md:text-2xl max-w-xl text-left rellax" data-rellax-speed="1">
             We blend creativity, strategy, and technology to craft impactful digital solutions that
             look stunning, engage users and drive results.
           </p>
-          <div className="flex items-end rellax mt-4 sm:mt-0" data-rellax-speed="4">
+          <div className="flex items-end rellax" data-rellax-speed="4">
             <p className="text-xs font-extralight text-end">Scroll to explore</p>
           </div>
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1
-          className="text-[3rem] sm:text-[6rem] md:text-[9rem] lg:text-[12rem] leading-tight sm:leading-[120px] md:leading-[160px] lg:leading-[204px] rellax"
-          data-rellax-speed="3"
+          className="text-[12rem] leading-[204px] rellax"
+          data-rellax-speed="3" // Parallax speed for the heading
           ref={rellaxRef}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 2, delay: 1 }}
         >
-          <span className="block text-left">Design,</span>
-          <span className="block text-center">Develop,</span>
-          <span className="block text-right">Experience.</span>
+          <span className="text-left">Design,</span>
+          <br />
+          <span className="text-center">Develop,</span>
+          <br />
+          <span className="text-right">Experience.</span>
         </motion.h1>
 
         {/* Description */}
         <motion.p
-          className="text-sm sm:text-lg md:text-xl max-w-xl sm:max-w-2xl rellax"
-          data-rellax-speed="2"
+          className="text-lg md:text-xl max-w-2xl rellax"
+          data-rellax-speed="2" // Parallax speed for the description
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
@@ -78,18 +80,18 @@ const Hero = () => {
 
         {/* Links */}
         <motion.div
-          className="flex flex-col sm:flex-row sm:justify-between"
+          className="flex flex-col md:flex-row md:justify-between"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          <div className="rellax mb-6 sm:mb-0" data-rellax-speed="-1">
+          <div className='rellax' data-rellax-speed="-1">
             <Link href="/studio" className="hover:text-[#ff5c00]">
               The Studio
             </Link>
           </div>
-          <div className="flex flex-col md:flex-row space-y-6 sm:space-y-0 sm:space-x-8 md:space-x-48">
-            <div>
+          <div className="flex flex-row space-x-8 md:space-x-48">
+            <div className=''>
               <ul className="space-y-2">
                 <li>
                   <Link href="/works" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
@@ -113,7 +115,7 @@ const Hero = () => {
                 </li>
               </ul>
             </div>
-            <div className="rellax" data-rellax-speed="1">
+            <div className='rellax' data-rellax-speed="1">
               <div className="space-y-4 md:pr-24">
                 <p>
                   <a href="mailto:info@company.com" className="hover:text-[#ff5c00]">
