@@ -45,7 +45,7 @@ export default function Works() {
                 whileTap={{ scale: 0.9, rotate: -15 }}
               >
                 <Link href={project.link}>
-                  <BiLink size={24} className='text-gray-700 hover:text-black transition-colors' />
+                  <BiLink size={20} className='text-black hover:text-[#ff073a] transition-colors duration-300' />
                 </Link>
               </motion.div>
             </div>

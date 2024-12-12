@@ -28,7 +28,7 @@ const Navbar = () => {
           transition={{ delay: 0.8, duration: 1.6 }}
         >
           <li>
-            <Link href="/work" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-xs font-thin">
+            <Link href="/works" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-xs font-thin">
               Work
             </Link>
           </li>
