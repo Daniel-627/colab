@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import NavToggle from "./NavToggle";
 
 const Navbar = () => {
   return (
@@ -46,6 +47,9 @@ const Navbar = () => {
             <Link href="/contact" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-xs font-thin">
               Contact
             </Link>
+          </li>
+          <li>
+            <NavToggle/>
           </li>
         </motion.ul>
       </div>
