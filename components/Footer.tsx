@@ -11,6 +11,27 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-20">
         <div className="grid md:grid-cols-12 gap-12">
 
+          {/* Email Form */}
+          <motion.div
+            className="md:col-span-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+          >
+            <h1 className="text-4xl font-semibold mb-4">We would love to hear from you.</h1>
+            <p className="text-lg font-extralight mb-4">
+              Book a free consultation now to discover how we can help your business thrive!
+            </p>
+            <motion.button
+              className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact Us
+            </motion.button>
+          </motion.div>
+
           {/* Logo and Contact Information */}
           <motion.div
             className="md:col-span-5"
@@ -89,17 +110,8 @@ const Footer: React.FC = () => {
             </ul>
           </motion.div>
 
-          {/* Email Form */}
-          <motion.div
-            className="md:col-span-4"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
-            <EmailForm />
-          </motion.div>
+          
+          
 
         </div>
 

@@ -10,7 +10,7 @@ export default function NavLinks({}: Props) {
   return (
     <div>
         <motion.ul
-          className="flex gap-8 text-lg font-medium"
+          className="flex gap-8 text-lg font-medium "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 1.6 }}

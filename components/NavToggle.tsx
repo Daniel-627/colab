@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { motion } from "framer-motion";
 
 const NavToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,12 +20,12 @@ const NavToggle = () => {
         onClick={toggleMenu}
         aria-label="Toggle Menu"
       >
-        {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+        {isOpen ? <AiOutlineClose className="text-[#2007ff]"/> : <AiOutlineMenu className="text-[#2007ff]"/>}
       </button>
 
       {/* Menu */}
       {isOpen && (
-        <div className="absolute top-12 right-0 bg-gray-800 text-white w-48 rounded shadow-lg">
+        <div className="absolute top-12  right-8 bg-gradient-to-br from-[#ff073a] to-[#ff5c00] text-white w-48 rounded-bl-3xl rounded-tl-md rounded shadow-lg">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li className="hover:text-blue-500 cursor-pointer">Works</li>
             <li className="hover:text-blue-500 cursor-pointer">Studio</li>
@@ -33,7 +34,7 @@ const NavToggle = () => {
           </ul>
 
           {/* Social Icons */}
-          <div className="flex justify-center space-x-4 border-t border-gray-700 pt-4">
+          <div className="flex justify-center space-x-4 border-t border-gray-700 pt-4 pb-2">
             <a 
               href="https://twitter.com" 
               target="_blank" 

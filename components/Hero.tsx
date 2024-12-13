@@ -52,7 +52,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-5xl md:text-[12rem] leading-tight md:leading-[204px] md:rellax"
+          className="text-5xl  md:text-[9rem] lg:text-[12rem] leading-tight md:leading-[204px] md:rellax"
           data-rellax-speed="3"
           ref={rellaxRef}
           initial={{ opacity: 0, y: 50 }}
