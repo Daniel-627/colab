@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -8,16 +8,16 @@ import { projects } from '@/data/index';
 
 export default function Works() {
   return (
-    <div className='py-16 mx-auto'>
+    <div className='py-16 px-4 sm:px-6 lg:px-8 mx-auto'>
       <motion.div
-        className='text-9xl py-2 mx-4'
+        className='text-5xl sm:text-7xl lg:text-9xl py-2 mx-4 text-center lg:text-left'
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
         Works
       </motion.div>
-      <div className='grid grid-cols-3 gap-6 mx-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto'>
         {projects.map((project) => (
           <motion.div
             key={project.id}
@@ -29,11 +29,11 @@ export default function Works() {
           >
             <p className='font-extralight text-xs'>P0{project.id}</p>
             <p className='font-light text-sm px-2'>{project.des}</p>
-            <h1 className='font-medium text-lg px-3'>{project.title}</h1>
+            <h1 className='font-medium text-base sm:text-lg px-3'>{project.title}</h1>
             <motion.img
               src={project.img}
               alt={project.title}
-              className='h-96 object-cover rounded-xl'
+              className='h-48 sm:h-72 lg:h-96 object-cover rounded-xl'
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}

@@ -33,13 +33,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col text-white px-6 md:px-10 pt-[400px] md:pt-[400px] space-y-12 md:space-y-24">
+      <div className="relative z-10 flex flex-col text-white px-6 md:px-10 pt-[500px] md:pt-[400px] space-y-12 md:space-y-24">
         {/* Subtitle */}
         <motion.div
           className="flex flex-col md:flex-row md:justify-between"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 2 }}
         >
           <p className="text-sm md:text-2xl max-w-xl text-left md:rellax" data-rellax-speed="1">
             We blend creativity, strategy, and technology to craft impactful digital solutions that
@@ -52,7 +52,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-6xl md:text-[12rem] leading-tight md:leading-[204px] md:rellax"
+          className="text-5xl md:text-[12rem] leading-tight md:leading-[204px] md:rellax"
           data-rellax-speed="3"
           ref={rellaxRef}
           initial={{ opacity: 0, y: 50 }}

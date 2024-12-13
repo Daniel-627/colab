@@ -1,31 +1,13 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { services } from '@/data';
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import { services } from "@/data";
 
 type Props = {};
 
 export default function Services({}: Props) {
-  const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (containerRef.current) {
-        const scrollY = window.scrollY;
-        const offset = containerRef.current.offsetTop;
-
-        // Adjust animation based on scroll
-        controls.start({
-          y: (scrollY - offset) * -0.2, // Parallax effect for text
-        });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [controls]);
 
   return (
     <div
@@ -38,7 +20,8 @@ export default function Services({}: Props) {
         alt="Service Image"
         className="object-cover h-[550px] w-full rounded-3xl p-4 col-span-4"
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
         transition={{ duration: 1.2 }}
       />
 
@@ -46,7 +29,8 @@ export default function Services({}: Props) {
       <motion.div
         className="col-span-8 flex flex-col space-y-6"
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         variants={{
           hidden: { opacity: 0, y: 50 },
           visible: { opacity: 1, y: 0 },
@@ -67,24 +51,46 @@ export default function Services({}: Props) {
           <motion.div
             key={service.index}
             className="flex flex-row border-b-2 p-4 space-y-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
             }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl pr-4 text-gray-800">0{service.index}</h1>
-            <div className="flex flex-col">
+            <motion.h1
+              className="text-4xl pr-4 text-gray-800"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              0{service.index}
+            </motion.h1>
+            <motion.div
+              className="flex flex-col"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <h2 className="text-xl font-semibold text-gray-800">
                 {service.title}
               </h2>
               <p className="text-base font-light text-gray-600">
                 {service.details}
               </p>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </motion.div>
     </div>
   );
 }
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import EmailForm from './EmailForm';
 
@@ -9,7 +10,13 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-12">
 
           {/* Logo and Contact Information */}
-          <div className="md:col-span-5">
+          <motion.div
+            className="md:col-span-5"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+          >
             <div className="flex items-center space-x-4">
               <img src="/logos/logo.png" alt="logo" className="h-16" />
               <h1 className="text-xl font-bold">Colab Kenya</h1>
@@ -53,10 +60,16 @@ const Footer: React.FC = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div className="md:col-span-3">
+          <motion.div
+            className="md:col-span-3"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -72,23 +85,36 @@ const Footer: React.FC = () => {
                 <a href="/contact" className="hover:text-[#ff073a] transition-colors duration-200">Contact</a>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Email Form */}
-          <div className="md:col-span-4">
+          <motion.div
+            className="md:col-span-4"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-lg font-semibold mb-4">Get in Touch</h3>
             <EmailForm />
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+        <motion.div
+          className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           &copy; {new Date().getFullYear()} Colab Kenya. All Rights Reserved.
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+
