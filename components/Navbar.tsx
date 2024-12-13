@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import NavToggle from "./NavToggle";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
@@ -22,36 +23,12 @@ const Navbar = () => {
         </motion.h1>
 
         {/* Right Side: Navigation Links */}
-        <motion.ul
-          className="flex gap-8 text-lg font-medium"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1.6 }}
-        >
-          <li>
-            <Link href="/works" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-xs font-thin">
-              Work
-            </Link>
-          </li>
-          <li>
-            <Link href="/studio" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-xs font-thin">
-              Studio
-            </Link>
-          </li>
-          <li>
-            <Link href="/news" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-xs font-thin">
-              News
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-xs font-thin">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <NavToggle/>
-          </li>
-        </motion.ul>
+        <div className="mr-4 hidden md:visible">
+          <NavLinks />
+        </div>
+        <div className="mr-4 visible md:hidden">
+          <NavToggle />
+        </div>
       </div>
     </motion.nav>
   );

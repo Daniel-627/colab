@@ -12,7 +12,7 @@ const NavToggle = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* Toggle Button */}
       <button 
         className="text-2xl p-2 focus:outline-none absolute top-4 right-4" 
