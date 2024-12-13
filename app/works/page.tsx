@@ -75,7 +75,7 @@ export default function page() {
               >
                 <Link href={`/projects/${project.slug?.current}`} passHref>
                   <BiArrowToRight
-                    size={24}
+                    size={20}
                     className="text-black hover:text-[#ff073a] transition-colors duration-300"
                   />
                 </Link>
@@ -86,7 +86,7 @@ export default function page() {
               >
                 <Link href="" passHref>
                   <BiLink
-                    size={24}
+                    size={20}
                     className="text-black hover:text-[#ff073a] transition-colors duration-300"
                   />
                 </Link>
