@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <div
-      className="relative w-full h-[300vh] bg-center bg-no-repeat mx-auto"
+      className="relative w-full h-[200vh] md:h-[300vh] bg-center bg-no-repeat mx-auto"
       style={{
         backgroundImage: "url('/img7.jpg')",
         backgroundSize: "cover",
@@ -41,18 +41,18 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-sm md:text-2xl max-w-xl text-left rellax" data-rellax-speed="1">
+          <p className="text-sm md:text-2xl max-w-xl text-left md:rellax" data-rellax-speed="1">
             We blend creativity, strategy, and technology to craft impactful digital solutions that
             look stunning, engage users and drive results.
           </p>
-          <div className="flex items-end rellax mt-4 md:mt-0" data-rellax-speed="4">
+          <div className="flex items-end md:rellax mt-4 md:mt-0" data-rellax-speed="4">
             <p className="text-xs font-extralight text-end">Scroll to explore</p>
           </div>
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1
-          className="text-6xl md:text-[12rem] leading-tight md:leading-[204px] rellax"
+          className="text-6xl md:text-[12rem] leading-tight md:leading-[204px] md:rellax"
           data-rellax-speed="3"
           ref={rellaxRef}
           initial={{ opacity: 0, y: 50 }}
@@ -60,13 +60,13 @@ const Hero = () => {
           transition={{ duration: 2, delay: 1 }}
         >
           <span className="block text-left">Design,</span>
-          <span className="block text-center">Develop,</span>
-          <span className="block text-right">Experience.</span>
+          <span className="block text-left md:text-center">Develop,</span>
+          <span className="block text-left md:text-right">Experience.</span>
         </motion.h1>
 
         {/* Description */}
         <motion.p
-          className="text-sm md:text-xl max-w-2xl rellax"
+          className="text-sm md:text-xl max-w-2xl md:rellax"
           data-rellax-speed="2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -83,7 +83,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
         >
-          <div className="rellax mb-6 md:mb-0" data-rellax-speed="-1">
+          <div className="md:rellax mb-6 md:mb-0" data-rellax-speed="-1">
             <Link href="/studio" className="hover:text-[#ff5c00]">
               The Studio
             </Link>
@@ -113,7 +113,7 @@ const Hero = () => {
                 </li>
               </ul>
             </div>
-            <div className="rellax" data-rellax-speed="1">
+            <div className="md:rellax" data-rellax-speed="1">
               <div className="space-y-4 md:pr-24">
                 <p>
                   <a href="mailto:info@company.com" className="hover:text-[#ff5c00]">
