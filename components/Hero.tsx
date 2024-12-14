@@ -84,7 +84,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1.5 }}
         >
           <div className="md:rellax mb-6 md:mb-0" data-rellax-speed="-1">
-            <Link href="/studio" className="hover:text-[#ff5c00]">
+            <Link href="/about" className="hover:text-[#ff5c00]">
               The Studio
             </Link>
           </div>
@@ -97,7 +97,7 @@ const Hero = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/studio" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                  <Link href="/about" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
                     Studio
                   </Link>
                 </li>

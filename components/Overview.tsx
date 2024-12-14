@@ -54,13 +54,13 @@ const Overview = () => {
               goals to deliver exceptional results.
             </p>
             <div className="flex justify-center md:justify-start gap-4">
-              <Link href="/contact">
+              <Link href="/about">
                 <motion.button
                   className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Get in Touch
+                  More About Us
                 </motion.button>
               </Link>
             </div>

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 const NavToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,12 +27,33 @@ const NavToggle = () => {
       {/* Menu */}
       {isOpen && (
         <div className="absolute top-12  right-8 bg-gradient-to-br from-[#ff073a] to-[#ff5c00] text-white w-48 rounded-bl-3xl rounded-tl-md rounded shadow-lg">
-          <ul className="flex flex-col items-center space-y-4 py-4">
-            <li className="hover:text-blue-500 cursor-pointer">Works</li>
-            <li className="hover:text-blue-500 cursor-pointer">Studio</li>
-            <li className="hover:text-blue-500 cursor-pointer">News</li>
-            <li className="hover:text-blue-500 cursor-pointer">Contacts</li>
-          </ul>
+          <motion.ul
+          className="flex flex-col items-center space-y-4 py-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 1.6 }}
+          >
+            <li>
+              <Link href="/works" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-sm font-thin">
+                Work
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-sm font-thin">
+                Studio
+              </Link>
+            </li>
+            <li>
+              <Link href="/news" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-sm font-thin">
+                News
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-[#ff5c00] hover:underline transition-all duration-500 text-sm font-thin">
+                Contact
+              </Link>
+            </li>
+          </motion.ul>
 
           {/* Social Icons */}
           <div className="flex justify-center space-x-4 border-t border-gray-700 pt-4 pb-2">

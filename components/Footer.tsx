@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import EmailForm from './EmailForm';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
@@ -23,13 +23,15 @@ const Footer: React.FC = () => {
             <p className="text-lg font-extralight mb-4">
               Book a free consultation now to discover how we can help your business thrive!
             </p>
-            <motion.button
-              className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Us
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Us
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* Logo and Contact Information */}
@@ -99,7 +101,7 @@ const Footer: React.FC = () => {
                 <a href="/works" className="hover:text-[#ff073a] transition-colors duration-200">Works</a>
               </li>
               <li>
-                <a href="/studio" className="hover:text-[#ff073a] transition-colors duration-200">Studio</a>
+                <a href="/about" className="hover:text-[#ff073a] transition-colors duration-200">Studio</a>
               </li>
               <li>
                 <a href="/news" className="hover:text-[#ff073a] transition-colors duration-200">News</a>

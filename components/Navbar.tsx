@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import NavToggle from "./NavToggle";
-import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   return (
