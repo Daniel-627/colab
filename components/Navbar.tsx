@@ -15,14 +15,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Left Side: Logo */}
         <motion.h1
-          className="text-2xl font-bold cursor-pointer top-4"
+          className="text-2xl font-bold cursor-pointer"
           whileHover={{ scale: 1.1 }}
         >
           <Link href="/">Colab Kenya</Link>
         </motion.h1>
 
         {/* Right Side: Navigation Links */}
-        <div className="mr-4">
+        <div className="md:mr-4">
           <NavToggle />
         </div>
       </div>
