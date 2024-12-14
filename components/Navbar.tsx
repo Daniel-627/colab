@@ -22,7 +22,7 @@ const Navbar = () => {
         </motion.h1>
 
         {/* Right Side: Navigation Links */}
-        <div className="md:mr-4">
+        <div className="mr-2 md:mr-4">
           <NavToggle />
         </div>
       </div>
