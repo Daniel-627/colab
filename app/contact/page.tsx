@@ -2,7 +2,7 @@ import React from 'react';
 import { FaTwitter, FaLinkedin, FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaSnapchat } from 'react-icons/fa';
 import EmailForm from '@/components/EmailForm';
 
-const ContactPage = () => {
+const page = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Banner */}
@@ -79,4 +79,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default page;

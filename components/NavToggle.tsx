@@ -17,7 +17,7 @@ const NavToggle = () => {
     <div className="relative ">
       {/* Toggle Button */}
       <button 
-        className="text-2xl px-2 focus:outline-none absolute" 
+        className="text-2xl py-2 px-2 md:py-0 focus:outline-none absolute" 
         onClick={toggleMenu}
         aria-label="Toggle Menu"
       >
