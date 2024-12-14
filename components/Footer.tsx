@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             className="md:col-span-4"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 1, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <h1 className="text-4xl font-semibold mb-4">We would love to hear from you.</h1>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             className="md:col-span-5"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 1, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <div className="flex items-center space-x-4">
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
             className="md:col-span-3"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 1, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>

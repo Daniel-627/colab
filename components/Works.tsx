@@ -9,14 +9,27 @@ import { projects } from '@/data/index';
 export default function Works() {
   return (
     <div className='py-16 px-4 sm:px-6 lg:px-8 mx-auto'>
-      <motion.div
-        className='text-5xl sm:text-7xl lg:text-9xl py-2 mx-4 text-center lg:text-left'
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
-      >
-        Works
-      </motion.div>
+      <div className='flex flex-col md:flex-row md:justify-between'>
+        <motion.div
+          className='text-5xl sm:text-7xl lg:text-9xl py-2 mx-4 text-center lg:text-left'
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+        >
+          Works
+        </motion.div>
+        <div className="flex justify-center md:justify-start gap-4">
+          <Link href="/works">
+            <motion.button
+              className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              See All Works
+            </motion.button>
+          </Link>
+        </div>
+      </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto'>
         {projects.map((project) => (
           <motion.div
@@ -52,17 +65,7 @@ export default function Works() {
           </motion.div>
         ))}
       </div>
-      <div className="flex justify-center md:justify-start gap-4">
-        <Link href="/works">
-          <motion.button
-            className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            See All Works
-          </motion.button>
-        </Link>
-      </div>
+      
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowDown } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import Rellax from 'rellax';
@@ -33,20 +33,25 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col text-white px-6 md:px-10 pt-[300px] md:pt-[400px] space-y-12 md:space-y-24">
+      <div className="relative z-10 flex flex-col text-white px-6 md:px-10 pt-[300px] md:pt-[390px] space-y-12 md:space-y-28">
         {/* Subtitle */}
         <motion.div
           className="flex flex-col md:flex-row md:justify-between"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          >
+          {/*initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-        >
+          transition={{ duration: 2 }}*/}
           <p className="text-sm md:text-2xl max-w-xl text-left md:rellax" data-rellax-speed="1">
             We blend creativity, strategy, and technology to craft impactful digital solutions that
             look stunning, engage users and drive results.
           </p>
-          <div className="flex items-end md:rellax mt-4 md:mt-0" data-rellax-speed="4">
-            <p className="text-xs font-extralight text-end">Scroll to explore</p>
+          <div className="flex md:items-end md:rellax mt-4 md:mt-0" data-rellax-speed="4">
+            <p className="text-xs font-extralight text-end md:visible">Scroll to explore </p>
+            <FaArrowDown className='text-sm md:hidden hover:text-lg hover:text-[#ff073a]'/>
           </div>
         </motion.div>
 
@@ -56,8 +61,9 @@ const Hero = () => {
           data-rellax-speed="3"
           ref={rellaxRef}
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2, delay: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: true }}
         >
           <span className="block text-left">Design,</span>
           <span className="block text-left md:text-center">Develop,</span>
@@ -68,9 +74,10 @@ const Hero = () => {
         <motion.p
           className="text-sm md:text-xl max-w-2xl md:rellax"
           data-rellax-speed="2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: true }}
         >
           Our mission is to bring your vision to life with sleek designs, seamless functionality, and a user-centered approach.
           From responsive websites to interactive interfaces, we ensure your digital identity stands out in today's competitive landscape.
@@ -79,9 +86,10 @@ const Hero = () => {
         {/* Links */}
         <motion.div
           className="flex flex-col md:flex-row md:justify-between"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          viewport={{ once: true }}
         >
           <div className="md:rellax mb-6 md:mb-0" data-rellax-speed="-1">
             <Link href="/about" className="hover:text-[#ff5c00]">

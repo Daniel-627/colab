@@ -40,29 +40,33 @@ const Overview = () => {
             developers committed to helping businesses achieve maximum online
             potential.
           </p>
-          <div className="space-y-4">
-            <h3 className="text-base sm:text-lg py-2 px-4 border-2 rounded-3xl inline-block">
-              Overview
-            </h3>
-            <p className="text-sm sm:text-base leading-relaxed">
-              Our mission is to create solutions tailored to your unique needs,
-              from stunning designs to seamless development and brand strategies
-              that drive engagement and growth.
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed">
-              From conception to execution, we ensure each step aligns with your
-              goals to deliver exceptional results.
-            </p>
-            <div className="flex justify-center md:justify-start gap-4">
-              <Link href="/about">
-                <motion.button
-                  className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  More About Us
-                </motion.button>
-              </Link>
+          <div className="flex flex-col md:flex-row md:space-x-4">
+            <div className="sm:my-4 md:my-0">
+              <h3 className="text-base sm:text-lg py-2 px-4 border-2 rounded-3xl inline-block">
+                Overview
+              </h3>
+            </div>
+            <div className="space-y-4">
+              <p className="text-sm sm:text-base leading-relaxed">
+                Our mission is to create solutions tailored to your unique needs,
+                from stunning designs to seamless development and brand strategies
+                that drive engagement and growth.
+              </p>
+              <p className="text-sm sm:text-base leading-relaxed">
+                From conception to execution, we ensure each step aligns with your
+                goals to deliver exceptional results.
+              </p>
+              <div className="flex justify-center md:justify-start gap-4">
+                <Link href="/about">
+                  <motion.button
+                    className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    More About Us
+                  </motion.button>
+                </Link>
+              </div>
             </div>
           </div>
         </motion.div>
