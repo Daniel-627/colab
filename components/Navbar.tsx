@@ -14,6 +14,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <motion.nav
       className="fixed top-0 left-0 w-full bg-transparent text-white z-50 px-6 py-4"
@@ -27,19 +31,19 @@ const Navbar = () => {
           className="flex flex-row items-center space-x-3 cursor-pointer"
           whileHover={{ scale: 1.05 }}
         >
-          <Link href="/" >
-                <Image
-                  src="/logos/logo1.png" // Replace with your logo path
-                  alt="Colab Kenya Logo"
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-                </Link>
-                <Link href="/">
-                <h1 className="text-lg font-semibold md:text-2xl md:font-bold">
-                  Colab Kenya
-                </h1>
+          <Link href="/">
+            <Image
+              src="/logos/logo1.png" // Replace with your logo path
+              alt="Colab Kenya Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+          </Link>
+          <Link href="/">
+            <h1 className="text-lg font-semibold md:text-2xl md:font-bold">
+              Colab Kenya
+            </h1>
           </Link>
         </motion.div>
 
@@ -69,6 +73,7 @@ const Navbar = () => {
                 <Link
                   href="/works"
                   className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                  onClick={closeMenu}
                 >
                   Work
                 </Link>
@@ -77,6 +82,7 @@ const Navbar = () => {
                 <Link
                   href="/about"
                   className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                  onClick={closeMenu}
                 >
                   Studio
                 </Link>
@@ -85,6 +91,7 @@ const Navbar = () => {
                 <Link
                   href="/news"
                   className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                  onClick={closeMenu}
                 >
                   News
                 </Link>
@@ -93,6 +100,7 @@ const Navbar = () => {
                 <Link
                   href="/contact"
                   className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                  onClick={closeMenu}
                 >
                   Contact
                 </Link>
