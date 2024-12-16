@@ -55,19 +55,33 @@ const Hero = () => {
         {/* Subtitle */}
         <motion.div
           className="flex flex-col md:flex-row md:justify-between"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          transition={{ duration: 1.6, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
           <p className="text-sm md:text-2xl max-w-xl text-left">
             We blend creativity, strategy, and technology to craft impactful digital solutions that
             look stunning, engage users and drive results.
           </p>
-          <div className="flex md:items-end mt-4 md:mt-0">
-            <p className="text-xs font-extralight text-end md:visible">Scroll to explore </p>
-            <FaArrowDown className="text-sm md:hidden hover:text-lg hover:text-[#ff073a]" />
-          </div>
+          <motion.div
+            className="text-white flex flex-col items-center mr-7"
+            initial={{ y: 0 }}
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <span className="text-lg">Scroll</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              className="w-6 h-6 animate-bounce"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </motion.div>
         </motion.div>
 
         {/* Main Heading */}

@@ -251,7 +251,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full px-4 py-2 bg-[#ff073a] hover:bg-[#ff5c00] text-white rounded-md transition-colors duration-300"
+          className="px-4 py-2 bg-[#ff073a] hover:bg-[#ff5c00] text-white rounded-md transition-colors duration-300"
         >
           Submit Questionnaire
         </motion.button>
