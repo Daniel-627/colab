@@ -10,7 +10,7 @@ const Overview = () => {
 
   return (
     <section
-      className="py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-8 mx-auto"
+      className="py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-8 mx-auto overflow-hidden"
       ref={sectionRef}
     >
       <div className="flex flex-col md:grid md:grid-cols-12 items-center gap-8 md:gap-12 max-w-6xl mx-auto">
