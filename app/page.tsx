@@ -9,12 +9,14 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-       <Hero />
-       <Overview />
-       <Works />
-       <Companies />
-       <Services />
-       <CreativeProcess />
+      <Hero />
+      <Overview />
+      <Works />
+      <div className="flex flex-col-reverse md:flex-col">
+        <Companies />
+        <Services />
+      </div>
+      <CreativeProcess />
     </div>
   );
 }

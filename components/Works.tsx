@@ -18,10 +18,10 @@ export default function Works() {
         >
           Works
         </motion.div>
-        <div className="flex justify-center md:justify-start gap-4">
+        <div className="flex justify-center md:justify-start gap-4 md:mr-7">
           <Link href="/works">
             <motion.button
-              className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
+              className="bg-[#ff073a] hover:bg-[#cf7a49] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

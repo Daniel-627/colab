@@ -12,7 +12,7 @@ export default function Services({}: Props) {
   return (
     <div
       ref={containerRef}
-      className="md:grid md:grid-cols-12 mx-auto flex flex-col px-6 space-y-8 py-16"
+      className="md:grid md:grid-cols-12 mx-auto flex flex-col-reverse px-6 space-y-8 py-16"
     >
       {/* Image Section */}
       <motion.img

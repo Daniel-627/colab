@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
           {/* Email Form */}
           <motion.div
-            className="md:col-span-4"
+            className="md:col-span-5"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
@@ -34,9 +34,35 @@ const Footer: React.FC = () => {
             </Link>
           </motion.div>
 
+
+          {/* Quick Links */}
+          <motion.div
+            className="md:col-span-3"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/works" className="hover:text-[#ff073a] transition-colors duration-200">Works</a>
+              </li>
+              <li>
+                <a href="/about" className="hover:text-[#ff073a] transition-colors duration-200">Studio</a>
+              </li>
+              <li>
+                <a href="/news" className="hover:text-[#ff073a] transition-colors duration-200">News</a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-[#ff073a] transition-colors duration-200">Contact</a>
+              </li>
+            </ul>
+          </motion.div>
+          
           {/* Logo and Contact Information */}
           <motion.div
-            className="md:col-span-5"
+            className="md:col-span-4"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
@@ -86,34 +112,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
-          {/* Quick Links */}
-          <motion.div
-            className="md:col-span-3"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/works" className="hover:text-[#ff073a] transition-colors duration-200">Works</a>
-              </li>
-              <li>
-                <a href="/about" className="hover:text-[#ff073a] transition-colors duration-200">Studio</a>
-              </li>
-              <li>
-                <a href="/news" className="hover:text-[#ff073a] transition-colors duration-200">News</a>
-              </li>
-              <li>
-                <a href="/contact" className="hover:text-[#ff073a] transition-colors duration-200">Contact</a>
-              </li>
-            </ul>
-          </motion.div>
-
-          
-          
 
         </div>
 

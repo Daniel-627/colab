@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body
         style={{ fontFamily: 'Comfortaa' }}
-        className={`mx-auto font-comfortaa antialiased`}
+        className="mx-auto font-comfortaa antialiased"
       >
         <Navbar />
         {children}

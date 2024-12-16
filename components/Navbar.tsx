@@ -24,20 +24,22 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo and Brand Name */}
         <motion.div
-          className="flex items-center space-x-3 cursor-pointer"
+          className="flex flex-row items-center space-x-3 cursor-pointer"
           whileHover={{ scale: 1.05 }}
         >
-          <Link href="/">
-            <Image
-              src="/logos/logo1.png" // Replace with your logo path
-              alt="Colab Kenya Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <h1 className="text-lg font-semibold md:text-2xl md:font-bold">
-              Colab Kenya
-            </h1>
+          <Link href="/" >
+                <Image
+                  src="/logos/logo1.png" // Replace with your logo path
+                  alt="Colab Kenya Logo"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+                </Link>
+                <Link href="/">
+                <h1 className="text-lg font-semibold md:text-2xl md:font-bold">
+                  Colab Kenya
+                </h1>
           </Link>
         </motion.div>
 

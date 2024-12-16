@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <div
-      className="relative w-full h-[200vh] md:h-[300vh] bg-center bg-no-repeat mx-auto"
+      className="relative w-full h-[200vh] md:h-[300vh] bg-center bg-no-repeat"
       style={{
         backgroundImage: "url('/img7.jpg')",
         backgroundSize: "cover",
