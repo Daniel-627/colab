@@ -10,7 +10,7 @@ const Overview = () => {
 
   return (
     <section
-      className="py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-8 mx-auto overflow-hidden" // Ensures no overflow
+      className="py-12 px-4 sm:py-16 sm:px-6 lg:py-24 lg:px-8 mx-auto overflow-hidden"
       ref={sectionRef}
     >
       <div className="flex flex-col md:grid md:grid-cols-12 items-center gap-8 md:gap-12 max-w-6xl mx-auto">
@@ -31,8 +31,8 @@ const Overview = () => {
         {/* Content */}
         <motion.div
           className="flex flex-col gap-6 text-center md:text-left md:col-span-8"
-          initial={{ opacity: 0, x: 30 }} // Reduced the x value to avoid pushing content far outside
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          initial={{ opacity: 0, x: 30 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
           transition={{ duration: 2, ease: "easeOut" }}
         >
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug">
@@ -76,6 +76,3 @@ const Overview = () => {
 };
 
 export default Overview;
-
-
-

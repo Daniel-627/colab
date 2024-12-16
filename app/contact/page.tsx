@@ -1,17 +1,19 @@
-'use client'
+'use client';
 
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaSnapchat } from 'react-icons/fa';
+import {
+  FaTwitter, FaLinkedin, FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaSnapchat,
+} from 'react-icons/fa';
 import EmailForm from '@/components/EmailForm';
 import { motion } from 'framer-motion';
 
 const page = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen overflow-hidden">
       {/* Banner */}
-      <div className="relative h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white">
-        <motion.h1 
-          className="absolute top-16 right-8 text-5xl font-bold lg:top-24 lg:right-16"
+      <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white overflow-hidden">
+        <motion.h1
+          className="absolute right-8 text-5xl font-bold top-24 lg:right-16"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -19,8 +21,8 @@ const page = () => {
           Get in Touch With Us
         </motion.h1>
 
-        <motion.p 
-          className="absolute bottom-8 left-8 text-lg lg:text-xl max-w-md text-left"
+        <motion.p
+          className="absolute bottom-12 md:bottom-8 left-8 text-lg lg:text-xl max-w-md text-left"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -36,12 +38,12 @@ const page = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           <span className="text-lg">Scroll</span>
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            strokeWidth="2" 
-            stroke="currentColor" 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+            stroke="currentColor"
             className="w-6 h-6 animate-bounce"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />

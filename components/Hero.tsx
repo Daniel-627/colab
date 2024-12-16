@@ -11,14 +11,32 @@ const Hero = () => {
   const rellaxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (rellaxRef.current) {
-      new Rellax('.rellax', {
-        speed: -5, // Adjust speed for the parallax effect
-        center: false, // Keeps elements positioned relative to the viewport
-        vertical: true, // Enable vertical scrolling
-        horizontal: false, // Disable horizontal scrolling
-      });
-    }
+    const initRellax = () => {
+      const screenWidth = window.innerWidth;
+
+      // Only initialize Rellax for screens wider than 768px
+      if (screenWidth > 768 && rellaxRef.current) {
+        new Rellax('.rellax', {
+          speed: -5, // Adjust speed for the parallax effect
+          center: false, // Keeps elements positioned relative to the viewport
+          vertical: true, // Enable vertical scrolling
+          horizontal: false, // Disable horizontal scrolling
+        });
+      } else {
+        // Disable parallax effect for smaller screens
+        document.querySelectorAll('.rellax').forEach((el) => {
+          (el as HTMLElement).style.transform = 'none';
+        });
+
+      }
+    };
+
+    initRellax(); // Initialize on mount
+    window.addEventListener('resize', initRellax); // Reinitialize on resize
+
+    return () => {
+      window.removeEventListener('resize', initRellax); // Cleanup listener
+    };
   }, []);
 
   return (
@@ -41,23 +59,20 @@ const Hero = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
           viewport={{ once: true }}
-          >
-          {/*initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}*/}
-          <p className="text-sm md:text-2xl max-w-xl text-left md:rellax" data-rellax-speed="1">
+        >
+          <p className="text-sm md:text-2xl max-w-xl text-left">
             We blend creativity, strategy, and technology to craft impactful digital solutions that
             look stunning, engage users and drive results.
           </p>
-          <div className="flex md:items-end md:rellax mt-4 md:mt-0" data-rellax-speed="4">
+          <div className="flex md:items-end mt-4 md:mt-0">
             <p className="text-xs font-extralight text-end md:visible">Scroll to explore </p>
-            <FaArrowDown className='text-sm md:hidden hover:text-lg hover:text-[#ff073a]'/>
+            <FaArrowDown className="text-sm md:hidden hover:text-lg hover:text-[#ff073a]" />
           </div>
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1
-          className="text-5xl  md:text-[9rem] lg:text-[12rem] leading-tight md:leading-[204px] md:rellax"
+          className="text-5xl md:text-[9rem] lg:text-[12rem] leading-tight md:leading-[204px] rellax"
           data-rellax-speed="3"
           ref={rellaxRef}
           initial={{ opacity: 0, y: 50 }}
@@ -72,7 +87,7 @@ const Hero = () => {
 
         {/* Description */}
         <motion.p
-          className="text-sm md:text-xl max-w-2xl md:rellax"
+          className="text-sm md:text-xl max-w-2xl rellax"
           data-rellax-speed="2"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +106,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <div className="md:rellax mb-6 md:mb-0" data-rellax-speed="-1">
+          <div className=" mb-6 md:mb-0">
             <Link href="/about" className="hover:text-[#ff5c00]">
               The Studio
             </Link>
@@ -121,7 +136,7 @@ const Hero = () => {
                 </li>
               </ul>
             </div>
-            <div className="md:rellax" data-rellax-speed="1">
+            <div className="">
               <div className="space-y-4 md:pr-24">
                 <p>
                   <a href="mailto:info@company.com" className="hover:text-[#ff5c00]">
