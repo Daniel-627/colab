@@ -83,7 +83,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
   return (
     <div className='p-4'>
-      <form className="flex flex-col space-y-2">
+      <form className="flex flex-col space-y-1">
         <p className='pt-2'>Name*</p>
         <input
           type="text"
@@ -136,7 +136,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           value={formData.preferredTimeline}
           onChange={handleChange}
           placeholder="Preferred Project Timeline"
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
 
         <p className='pt-2'>What is your style?</p>
@@ -146,7 +146,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           value={formData.designStyle}
           onChange={handleChange}
           placeholder="Preferred Design Style (e.g. minimalistic, modern)"
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
 
         <div>
@@ -202,7 +202,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           onChange={handleChange}
           placeholder="What's your target?"
           rows={4}
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
 
         <p className='pt-2'>Attach extra file</p>
@@ -221,7 +221,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           onChange={handleChange}
           placeholder="Any additional notes or information?"
           rows={4}
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         ></textarea>
 
         <motion.button
