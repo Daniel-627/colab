@@ -1,9 +1,9 @@
 import {DocumentTextIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
-export const postType = defineType({
-  name: 'post',
-  title: 'Post',
+export const posterType = defineType({
+  name: 'poster',
+  title: 'Poster',
   type: 'document',
   icon: DocumentTextIcon,
   fields: [
@@ -19,9 +19,8 @@ export const postType = defineType({
       },
     }),
     defineField({
-      name: 'author',
-      type: 'reference',
-      to: {type: 'author'},
+      name: 'projectNumber',
+      type: 'string',
     }),
     defineField({
       name: 'mainImage',
@@ -38,28 +37,14 @@ export const postType = defineType({
       ]
     }),
     defineField({
-      name: 'categories',
-      type: 'array',
-      of: [defineArrayMember({type: 'reference', to: {type: 'category'}})],
-    }),
-    defineField({
       name: 'publishedAt',
       type: 'datetime',
-    }),
-    defineField({
-      name: 'body',
-      type: 'blockContent',
     }),
   ],
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
       media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
     },
   },
 })
