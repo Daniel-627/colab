@@ -82,81 +82,54 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 
   return (
-    <div>
-      <form className="space-y-4">
+    <div className='p-4'>
+      <form className="flex flex-col space-y-2">
+        <p className='pt-2'>Name*</p>
         <input
           type="text"
           name="name"
           value={formData.name}
           onChange={handleChange}
           placeholder="Your Name"
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
         
+        <p  className='pt-2'>Email*</p>
         <input
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
           placeholder="Your Email"
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
-        
-        <input
-          type="tel"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          placeholder="Your Phone Number"
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
-        />
-        
+
         <select
           title='Business Type'
           name="businessType"
           value={formData.businessType}
           onChange={handleChange}
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 pt-4 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         >
-          <option value="">Select Your Business Type</option>
+          <option value="">Select Your Business Type*</option>
           <option value="startup">Startup</option>
           <option value="small_business">Small Business</option>
           <option value="enterprise">Enterprise</option>
           <option value="nonprofit">Nonprofit</option>
         </select>
 
+        <p  className='pt-2'>What is your estimated project budget?</p>
         <input
           type="number"
           name="projectBudget"
           value={formData.projectBudget}
           onChange={handleChange}
           placeholder="Estimated Project Budget"
-          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
+          className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-900 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
 
-        <div className="flex space-x-4">
-          <label>
-            <input
-              type="radio"
-              name="preferredContactMethod"
-              value="email"
-              checked={formData.preferredContactMethod === 'email'}
-              onChange={handleChange}
-            />
-            Email
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="preferredContactMethod"
-              value="phone"
-              checked={formData.preferredContactMethod === 'phone'}
-              onChange={handleChange}
-            />
-            Phone
-          </label>
-        </div>
 
+        <p  className='pt-2'>What is your preferred timeline?</p>
         <input
           type="text"
           name="preferredTimeline"
@@ -166,6 +139,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
 
+        <p className='pt-2'>What is your style?</p>
         <input
           type="text"
           name="designStyle"
@@ -176,8 +150,8 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         />
 
         <div>
-          <label className="text-gray-100">Services Needed</label>
-          <div className="space-y-2">
+          <label className="text-gray-900 pt-2">Services Needed</label>
+          <div className="flex flex-col space-y-2">
             <label>
               <input
                 type="checkbox"
@@ -221,15 +195,17 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           </div>
         </div>
 
+        <p className='pt-2'>What are the main goals of your project?</p>
         <textarea
           name="goals"
           value={formData.goals}
           onChange={handleChange}
-          placeholder="What are the main goals of your project?"
+          placeholder="What's your target?"
           rows={4}
           className="w-full px-4 py-2 bg-transparent border-b-2 border-gray-400 text-gray-100 focus:outline-none focus:border-b-2 focus:border-[#ff5c00]"
         />
 
+        <p className='pt-2'>Attach extra file</p>
         <input
           title='file'
           type="file"
@@ -238,6 +214,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           className="w-full text-gray-100"
         />
 
+        <p className='pt-2'>Anything Extra</p>
         <textarea
           name="additionalNotes"
           value={formData.additionalNotes}
@@ -253,7 +230,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           whileTap={{ scale: 0.95 }}
           className="px-4 py-2 bg-[#ff073a] hover:bg-[#ff5c00] text-white rounded-md transition-colors duration-300"
         >
-          Submit Questionnaire
+          Submit Form
         </motion.button>
       </form>
     </div>

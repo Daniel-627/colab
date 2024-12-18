@@ -42,13 +42,14 @@ export default function Works() {
         <motion.div
           className="flex flex-col md:flex-row items-center md:justify-between w-full px-8"
           initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.6, ease: 'easeOut' }}
+          viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-9xl py-2">Works</h1>
           <Link href="/works">
             <motion.button
-              className="text-white bg-[#ff073a] px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl hover:bg-gray-200 transition duration-300"
+              className="text-white bg-[#ff073a] px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl hover:bg-[#ff5c00] transition duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >

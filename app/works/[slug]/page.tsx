@@ -53,7 +53,7 @@ async function getProject(slug: string) {
   return project;
 }
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
+export default async function page({ params }: ProjectPageProps) {
   const project = await getProject(params.slug);
 
   if (!project) {

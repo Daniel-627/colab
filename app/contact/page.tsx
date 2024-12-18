@@ -16,17 +16,19 @@ const page = () => {
         <motion.h1
           className="absolute right-8 text-5xl font-bold top-24 lg:right-16"
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+          viewport={{ once: true }}
         >
           Get in Touch With Us
         </motion.h1>
 
         <motion.p
           className="absolute bottom-16 md:bottom-8 left-8 text-lg lg:text-xl max-w-md text-left"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.6 }}
+          viewport={{ once: true }}
         >
           We are here to assist you with any questions or inquiries. Feel free to reach out through our contact options below.
         </motion.p>

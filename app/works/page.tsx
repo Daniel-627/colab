@@ -42,17 +42,19 @@ export default function page() {
         <motion.div
         className="absolute right-8 text-4xl md:text-6xl lg:text-9xl py-2 mx-4 top-24 lg:right-1"
         initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: 'easeOut' }}
+        viewport={{ once: true }}
         >
           Works
         </motion.div>
 
         <motion.p
           className="absolute bottom-16 md:bottom-8 left-8 text-lg lg:text-xl max-w-md text-left"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.6 }}
+          viewport={{ once: true }}
         >
           We are here to assist you with any questions or inquiries. Feel free to reach out through our contact options below.
         </motion.p>
@@ -77,7 +79,7 @@ export default function page() {
           </svg>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-4 py-16 mx-auto px-4 md:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-4 py-16 px-4 md:px-8">
         {projects.map((project) => (
           <motion.div
             key={project._id}
