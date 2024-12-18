@@ -37,10 +37,10 @@ export default function Works() {
   }, []);
 
   return (
-    <div className="bg-gray-100 min-h-screen overflow-hidden">
-      <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white overflow-hidden">
+    <div className="bg-gray-100 text-gray-900 py-8">
+      <div className="">
         <motion.div
-          className="absolute flex items-center justify-between w-full px-8 top-24"
+          className="flex flex-col md:flex-row items-center md:justify-between w-full px-8"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -48,7 +48,7 @@ export default function Works() {
           <h1 className="text-4xl md:text-6xl lg:text-9xl py-2">Works</h1>
           <Link href="/works">
             <motion.button
-              className="bg-white text-[#ff073a] px-6 py-2 text-lg font-medium rounded-md hover:bg-gray-200 transition duration-300"
+              className="text-white bg-[#ff073a] px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl hover:bg-gray-200 transition duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -57,34 +57,6 @@ export default function Works() {
           </Link>
         </motion.div>
 
-        <motion.p
-          className="absolute bottom-16 md:bottom-8 left-8 text-lg lg:text-xl max-w-md text-left"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          We are here to assist you with any questions or inquiries. Feel free to reach out through our contact options below.
-        </motion.p>
-
-        {/* Scroll Arrow */}
-        <motion.div
-          className="absolute bottom-8 right-8 text-white flex flex-col items-center"
-          initial={{ y: 0 }}
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <span className="text-lg">Scroll</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="2"
-            stroke="currentColor"
-            className="w-6 h-6 animate-bounce"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </motion.div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-4 py-16 mx-auto px-4 md:px-8">
         {projects.map((project) => (
