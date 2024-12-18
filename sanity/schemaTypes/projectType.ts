@@ -13,6 +13,10 @@ export const projectType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'projectNumber',
+      type: 'string',
+    }),
+    defineField({
       name: 'description',
       title: 'Desc',
       type: 'string',

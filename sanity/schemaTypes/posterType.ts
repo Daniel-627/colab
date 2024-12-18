@@ -19,10 +19,6 @@ export const posterType = defineType({
       },
     }),
     defineField({
-      name: 'projectNumber',
-      type: 'string',
-    }),
-    defineField({
       name: 'mainImage',
       type: 'image',
       options: {
