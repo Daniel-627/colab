@@ -16,6 +16,8 @@ async function getProjects(): Promise<Project[]> {
       description,
       slug,
       mainImage,
+      projectUrl,
+      projectNumber,
       categories[]->{
         title
       }
@@ -106,7 +108,7 @@ export default function page() {
                 whileHover={{ scale: 1.2, rotate: 15 }}
                 whileTap={{ scale: 0.9, rotate: -15 }}
               >
-                <Link href={`/projects/${project.slug?.current}`} passHref>
+                <Link href={`/works/${project.slug?.current}`} passHref>
                   <BiArrowToRight
                     size={20}
                     className="text-black hover:text-[#ff073a] transition-colors duration-300"
