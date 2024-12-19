@@ -10,7 +10,7 @@ import { BiArrowToRight, BiLink } from 'react-icons/bi';
 
 async function getProjects(): Promise<Project[]> {
   const query = `
-    *[_type == 'project'] | order(_updatedAt desc) {
+  *[_type == 'project'] | order(_updatedAt desc) {
       title,
       _id,
       description,
