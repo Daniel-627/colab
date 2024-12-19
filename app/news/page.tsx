@@ -84,9 +84,9 @@ export default function Page() {
             >
               <Link href={`/news/${encodeURIComponent(post.slug.current)}`} passHref>
                 <div>
-                  {post.mainImage && (
+                  {urlFor(post.mainImage).url() && (
                     <img
-                      src={post.mainImage}
+                      src={urlFor(post.mainImage).url()}
                       alt={post.title}
                       className="object-cover w-full rounded-lg shadow-md"
                       style={{ aspectRatio: '3/2' }}
