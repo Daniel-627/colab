@@ -55,8 +55,8 @@ const Hero = () => {
         {/* Subtitle */}
         <motion.div
           className="flex flex-col md:flex-row md:justify-between"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
@@ -89,9 +89,9 @@ const Hero = () => {
           className="text-5xl md:text-[9rem] lg:text-[12rem] leading-tight md:leading-[204px] rellax"
           data-rellax-speed="3"
           ref={rellaxRef}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2 }}
           viewport={{ once: true }}
         >
           <span className="block text-left">Design,</span>
@@ -103,9 +103,9 @@ const Hero = () => {
         <motion.p
           className="text-sm md:text-xl max-w-2xl rellax"
           data-rellax-speed="2"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.6 }}
           viewport={{ once: true }}
         >
           Our mission is to bring your vision to life with sleek designs, seamless functionality, and a user-centered approach.
@@ -117,7 +117,7 @@ const Hero = () => {
           className="flex flex-col md:flex-row md:justify-between"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
           <div className=" mb-6 md:mb-0">

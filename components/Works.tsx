@@ -68,7 +68,7 @@ export default function Works() {
             className="border-l-2 p-4 space-y-4 bg-gray-50 rounded-lg"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <p className="font-extralight text-xs">P0{project.projectNumber}</p>
@@ -80,7 +80,7 @@ export default function Works() {
               className="h-56 md:h-72 lg:h-96 object-cover rounded-xl w-full"
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
+              transition={{ duration: 1.6, ease: 'easeOut' }}
               viewport={{ once: true }}
             />
             <div className="flex justify-between items-center">
@@ -88,7 +88,7 @@ export default function Works() {
                 whileHover={{ scale: 1.2, rotate: 15 }}
                 whileTap={{ scale: 0.9, rotate: -15 }}
               >
-                <Link href={`/projects/${project.slug?.current}`} passHref>
+                <Link href={`/works/${project.slug?.current}`} passHref>
                   <BiArrowToRight
                     size={20}
                     className="text-black hover:text-[#ff073a] transition-colors duration-300"
