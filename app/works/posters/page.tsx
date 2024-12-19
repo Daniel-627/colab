@@ -13,12 +13,8 @@ async function getPosters(): Promise<Posters[]> {
     *[_type == 'posters'] | order(_updatedAt desc) {
       title,
       _id,
-      description,
       slug,
-      mainImage,
-      categories[]->{
-        title
-      }
+      mainImage
     }
   `;
   const data = await client.fetch(query);

@@ -32,10 +32,6 @@ export const posterType = defineType({
         }
       ]
     }),
-    defineField({
-      name: 'publishedAt',
-      type: 'datetime',
-    }),
   ],
   preview: {
     select: {

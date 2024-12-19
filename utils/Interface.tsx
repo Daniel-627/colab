@@ -13,10 +13,8 @@ export interface Project {
 export interface Posters {
   _id: string;
   title: string;
-  description: string;
   slug: { current: string };
   mainImage: string;
-  categories: { title: string }[]; // Existing property
 }
 
 
