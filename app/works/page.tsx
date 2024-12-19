@@ -42,11 +42,11 @@ export default function page() {
     <div className="bg-gray-100 min-h-screen overflow-hidden">
       <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white overflow-hidden">
         <motion.div
-        className="absolute right-8 text-4xl md:text-6xl lg:text-9xl py-2 mx-4 top-24 lg:right-1"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: 'easeOut' }}
-        viewport={{ once: true }}
+          className="absolute right-8 text-4xl md:text-6xl lg:text-9xl py-2 mx-4 top-24 lg:right-1"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+          viewport={{ once: true }}
         >
           Works
         </motion.div>
@@ -91,7 +91,7 @@ export default function page() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <p className="font-extralight text-xs">P0{project._id}</p>
+            <p className="font-extralight text-xs">P0{project.projectNumber}</p>
             <p className="font-light text-sm px-2">{project.description}</p>
             <h1 className="font-medium text-lg px-3">{project.title}</h1>
             <motion.img
@@ -115,17 +115,19 @@ export default function page() {
                   />
                 </Link>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: 15 }}
-                whileTap={{ scale: 0.9, rotate: -15 }}
-              >
-                <Link href="" passHref>
-                  <BiLink
-                    size={20}
-                    className="text-black hover:text-[#ff073a] transition-colors duration-300"
-                  />
-                </Link>
-              </motion.div>
+              {project.projectUrl && (
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 15 }}
+                  whileTap={{ scale: 0.9, rotate: -15 }}
+                >
+                  <Link href={project.projectUrl} passHref>
+                    <BiLink
+                      size={20}
+                      className="text-black hover:text-[#ff073a] transition-colors duration-300"
+                    />
+                  </Link>
+                </motion.div>
+              )}
             </div>
           </motion.div>
         ))}

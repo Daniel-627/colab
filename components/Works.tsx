@@ -16,6 +16,8 @@ async function getProjects(): Promise<Project[]> {
       description,
       slug,
       mainImage,
+      projectUrl,
+      projectNumber,
       categories[]->{
         title
       }
@@ -69,7 +71,7 @@ export default function Works() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <p className="font-extralight text-xs">P0{project._id}</p>
+            <p className="font-extralight text-xs">P0{project.projectNumber}</p>
             <p className="font-light text-sm px-2">{project.description}</p>
             <h1 className="font-medium text-lg px-3">{project.title}</h1>
             <motion.img
@@ -93,17 +95,19 @@ export default function Works() {
                   />
                 </Link>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: 15 }}
-                whileTap={{ scale: 0.9, rotate: -15 }}
-              >
-                <Link href="" passHref>
-                  <BiLink
-                    size={20}
-                    className="text-black hover:text-[#ff073a] transition-colors duration-300"
-                  />
-                </Link>
-              </motion.div>
+              {project.projectUrl && (
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 15 }}
+                  whileTap={{ scale: 0.9, rotate: -15 }}
+                >
+                  <Link href={project.projectUrl} passHref>
+                    <BiLink
+                      size={20}
+                      className="text-black hover:text-[#ff073a] transition-colors duration-300"
+                    />
+                  </Link>
+                </motion.div>
+              )}
             </div>
           </motion.div>
         ))}

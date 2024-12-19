@@ -8,6 +8,7 @@ export interface Project {
   categories: { title: string }[]; // Existing property
   body?: any[];
   projectUrl?: string; // Added projectUrl property
+  projectNumber: string;
 }
 
 export interface Posters {

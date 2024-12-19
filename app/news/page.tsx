@@ -72,11 +72,11 @@ export default function Page() {
 
       {/* Masonry Layout */}
       <div className="px-4 py-16">
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {posts.map((post) => (
             <motion.div
               key={post._id}
-              className="break-inside-avoid mb-6 cursor-pointer"
+              className="cursor-pointer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -86,7 +86,7 @@ export default function Page() {
                 <div>
                   {post.mainImage && (
                     <img
-                      src={urlFor(post.mainImage).url()}
+                      src={post.mainImage}
                       alt={post.title}
                       className="object-cover w-full rounded-lg shadow-md"
                       style={{ aspectRatio: '3/2' }}

@@ -37,6 +37,7 @@ export default function PostersPage() {
 
   return (
     <div className="bg-gray-100 min-h-screen overflow-hidden">
+      {/* Banner */}
       <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white overflow-hidden">
         <motion.div
           className="absolute right-8 text-4xl md:text-6xl lg:text-9xl py-2 mx-4 top-24 lg:right-1"
@@ -76,17 +77,17 @@ export default function PostersPage() {
           </svg>
         </motion.div>
       </div>
+
+      {/* Posters Grid */}
       <div className="px-4 py-16">
         {error ? (
           <p className="text-center text-red-500">{error}</p>
         ) : (
-          <div
-            className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {posters.map((poster) => (
               <motion.div
                 key={poster._id}
-                className="break-inside-avoid mb-6"
+                className="mb-6"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: 'easeOut' }}
