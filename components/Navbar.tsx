@@ -38,14 +38,13 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      {/* Logo and Social Icons */}
+      {/* Logo */}
       <div
         className={`transition-opacity duration-500 ${
           atTop ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Logo */}
           <motion.div
             className="flex flex-row items-center space-x-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
@@ -64,55 +63,6 @@ const Navbar = () => {
                 Colab Kenya
               </h1>
             </Link>
-          </motion.div>
-
-          {/* Social Icons */}
-          <motion.div
-            className="flex space-x-4"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { staggerChildren: 0.2 },
-              },
-            }}
-          >
-            <motion.a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl text-white hover:text-blue-400"
-              aria-label="Twitter"
-              whileHover={{ scale: 1.2, rotate: 10 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaTwitter />
-            </motion.a>
-            <motion.a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl text-white hover:text-blue-700"
-              aria-label="LinkedIn"
-              whileHover={{ scale: 1.2, rotate: 10 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href="https://wa.me"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl text-white hover:text-green-500"
-              aria-label="WhatsApp"
-              whileHover={{ scale: 1.2, rotate: 10 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaWhatsapp />
-            </motion.a>
           </motion.div>
         </div>
       </div>
@@ -176,6 +126,55 @@ const Navbar = () => {
               </Link>
             </li>
           </motion.ul>
+
+          {/* Social Icons */}
+          <motion.div
+            className="flex justify-center space-x-4 border-t border-gray-700 pt-4 mt-4"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+          >
+            <motion.a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl hover:text-blue-400"
+              aria-label="Twitter"
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaTwitter />
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl hover:text-blue-700"
+              aria-label="LinkedIn"
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaLinkedin />
+            </motion.a>
+            <motion.a
+              href="https://wa.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl hover:text-green-500"
+              aria-label="WhatsApp"
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaWhatsapp />
+            </motion.a>
+          </motion.div>
         </div>
       )}
     </motion.nav>
@@ -183,5 +182,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
