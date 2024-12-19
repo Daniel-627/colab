@@ -10,6 +10,15 @@ export interface Project {
   projectUrl?: string; // Added projectUrl property
 }
 
+export interface Posters {
+  _id: string;
+  title: string;
+  description: string;
+  slug: { current: string };
+  mainImage: string;
+  categories: { title: string }[]; // Existing property
+}
+
 
 export interface ProjectsProps {
   projects: Project[];
