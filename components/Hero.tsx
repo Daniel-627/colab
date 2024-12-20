@@ -128,7 +128,89 @@ const Hero = () => {
           transition={{ duration: 1.2, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          {/* Add links here */}
+          {/* links */}
+          <motion.div
+          className="flex flex-col md:flex-row md:justify-between"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+          >
+            <div className="mb-6 md:mb-0">
+              <Link href="/about" className="hover:text-[#ff5c00]">
+                The Studio
+              </Link>
+            </div>
+            <div className="flex flex-col md:flex-row md:space-x-48">
+              <div className="mb-6 md:mb-0">
+                <ul className="space-y-2">
+                  <li>
+                    <Link href="/works" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                      Works
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                      Studio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/news" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                      News
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div className="space-y-4 md:pr-24">
+                  <p>
+                    <a href="mailto:info@company.com" className="hover:text-[#ff5c00]">
+                      info@company.com
+                    </a>
+                  </p>
+                  <p className="hover:text-[#ff5c00]">+254745253664</p>
+                  <div className="flex space-x-4 mt-4">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-500 transition-colors duration-500"
+                    >
+                      <FaFacebookF size={20} />
+                    </a>
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-black transition-colors duration-500"
+                    >
+                      <FaXTwitter size={20} />
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-pink-500 transition-colors duration-500"
+                    >
+                      <FaInstagram size={20} />
+                    </a>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-700 transition-colors duration-500"
+                    >
+                      <FaLinkedinIn size={20} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>
