@@ -1,4 +1,6 @@
 import { createClient } from '@sanity/client';
+
+
 import {
   apiVersion,
   dataset,
@@ -16,6 +18,7 @@ export const client = createClient({
 });
 
 // External Sanity Client
+
 export const externalClient = createClient({
   projectId: externalProjectId,
   dataset: externalDataset,

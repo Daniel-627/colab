@@ -5,7 +5,6 @@ import { fetchColabPosts } from '@/lib/api';
 import { Post } from '@/types/blog';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { urlFor } from '@/sanity/lib/image';
 
 export default function Page() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -71,11 +70,11 @@ export default function Page() {
 
       {/* Masonry Layout */}
       <div className="px-4 py-16">
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
           {posts.map((post) => (
             <motion.div
               key={post._id}
-              className="cursor-pointer"
+              className="break-inside-avoid bg-white p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-shadow"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -83,22 +82,9 @@ export default function Page() {
             >
               <Link href={`/news/${encodeURIComponent(post.slug.current)}`} passHref>
                 <div>
-                  {post.mainImage ? (
-                    <img
-                      src={urlFor(post.mainImage).url()}
-                      alt={post.title || 'Blog Image'}
-                      className="object-cover w-full rounded-lg shadow-md"
-                      style={{ aspectRatio: '3/2' }}
-                    />
-                  ) : (
-                    <div className="w-full rounded-lg shadow-md bg-gray-300" style={{ aspectRatio: '3/2' }}>
-                      <p className="text-center text-gray-500">No Image</p>
-                    </div>
-                  )}
-                  <h2 className="mt-2 text-lg font-medium">{post.title}</h2>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {new Date(post.publishedAt).toLocaleDateString()}
-                  </p>
+                  <h2 className="text-lg font-semibold mb-2">{post.title}</h2>
+                  <p className="text-sm text-gray-600 mb-4">{post.description}</p>
+                  <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
                 </div>
               </Link>
             </motion.div>
@@ -108,3 +94,4 @@ export default function Page() {
     </div>
   );
 }
+
