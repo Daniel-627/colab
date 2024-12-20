@@ -83,11 +83,13 @@ export default function PostersPage() {
         {error ? (
           <p className="text-center text-red-500">{error}</p>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div
+            className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4"
+          >
             {posters.map((poster) => (
               <motion.div
                 key={poster._id}
-                className="mb-6"
+                className="break-inside-avoid mb-4"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, ease: 'easeOut' }}
