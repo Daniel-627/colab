@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowDown } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import Rellax from 'rellax';
@@ -27,7 +27,6 @@ const Hero = () => {
         document.querySelectorAll('.rellax').forEach((el) => {
           (el as HTMLElement).style.transform = 'none';
         });
-
       }
     };
 
@@ -43,10 +42,19 @@ const Hero = () => {
     <div
       className="relative w-full h-[200vh] md:h-[250vh] lg:h-[300vh] bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/img7.jpg')",
+        backgroundImage: "url('/img7.webp')",
         backgroundSize: "cover",
       }}
     >
+      {/* Fallback for JPEG */}
+      <noscript>
+        <style>
+          {`.relative {
+            background-image: url('/img7.jpg');
+          }`}
+        </style>
+      </noscript>
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
 
@@ -91,7 +99,7 @@ const Hero = () => {
           ref={rellaxRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <span className="block text-left">Design,</span>
@@ -105,7 +113,7 @@ const Hero = () => {
           data-rellax-speed="2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           Our mission is to bring your vision to life with sleek designs, seamless functionality, and a user-centered approach.
@@ -120,7 +128,7 @@ const Hero = () => {
           transition={{ duration: 1.2, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <div className=" mb-6 md:mb-0">
+          <div className="mb-6 md:mb-0">
             <Link href="/about" className="hover:text-[#ff5c00]">
               The Studio
             </Link>
@@ -150,7 +158,7 @@ const Hero = () => {
                 </li>
               </ul>
             </div>
-            <div className="">
+            <div>
               <div className="space-y-4 md:pr-24">
                 <p>
                   <a href="mailto:info@company.com" className="hover:text-[#ff5c00]">
@@ -202,3 +210,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
