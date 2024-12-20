@@ -81,11 +81,11 @@ export default function page() {
           </svg>
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-4 py-16 px-4 md:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-4 py-16 px-4 md:px-8 border-r-2">
         {projects.map((project) => (
           <motion.div
             key={project._id}
-            className="border-l-2 p-4 space-y-4 bg-gray-50 rounded-lg"
+            className="border-l-2 p-4 space-y-4"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}

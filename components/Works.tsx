@@ -10,7 +10,8 @@ import { BiArrowToRight, BiLink } from 'react-icons/bi';
 
 async function getProjects(): Promise<Project[]> {
   const query = `
-    *[_type == 'project'] | order(_updatedAt desc)[0...3] {
+  
+  *[_type == 'project'] | order(_updatedAt desc)[0...3] {
       title,
       _id,
       description,
@@ -65,7 +66,7 @@ export default function Works() {
         {projects.map((project) => (
           <motion.div
             key={project._id}
-            className="border-l-2 p-4 space-y-4 bg-gray-50 rounded-lg"
+            className="border-l-2 p-4 space-y-4"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
