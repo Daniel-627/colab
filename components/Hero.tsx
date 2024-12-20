@@ -130,13 +130,13 @@ const Hero = () => {
         >
         
           
-            <div className="item-center ">
+            <div className="item-center mb-8 md:mb-0">
               <Link href="/about" className="hover:text-[#ff5c00]">
                 The Studio
               </Link>
             </div>
             <div className="flex flex-col md:flex-row md:space-x-48">
-              <div className="mb-6 md:mb-0">
+              <div className="mb-8 md:mb-0">
                 <ul className="space-y-2">
                   <li>
                     <Link href="/works" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
