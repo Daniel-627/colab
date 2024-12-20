@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
@@ -14,39 +15,45 @@ const Hero = () => {
     const initRellax = () => {
       const screenWidth = window.innerWidth;
 
-      // Only initialize Rellax for screens wider than 768px
       if (screenWidth > 768 && rellaxRef.current) {
         new Rellax('.rellax', {
-          speed: -5, // Adjust speed for the parallax effect
-          center: false, // Keeps elements positioned relative to the viewport
-          vertical: true, // Enable vertical scrolling
-          horizontal: false, // Disable horizontal scrolling
+          speed: -5,
+          center: false,
+          vertical: true,
+          horizontal: false,
         });
       } else {
-        // Disable parallax effect for smaller screens
         document.querySelectorAll('.rellax').forEach((el) => {
           (el as HTMLElement).style.transform = 'none';
         });
       }
     };
 
-    initRellax(); // Initialize on mount
-    window.addEventListener('resize', initRellax); // Reinitialize on resize
+    initRellax();
+    window.addEventListener('resize', initRellax);
 
     return () => {
-      window.removeEventListener('resize', initRellax); // Cleanup listener
+      window.removeEventListener('resize', initRellax);
     };
   }, []);
 
   return (
-    <div
-      className="relative w-full h-[200vh] md:h-[250vh] lg:h-[300vh] bg-center bg-no-repeat"
-      style={{
-        backgroundImage: "url('/img7.jpg ')",
-        backgroundSize: "cover",
-      }}
-    >
-      
+    <div className="relative w-full h-[200vh] md:h-[250vh] lg:h-[300vh]">
+      {/* Background Image */}
+      <motion.div
+        className="absolute inset-0"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <Image
+          src="/img7.jpg"
+          alt="Hero Background"
+          fill
+          priority
+          className="z-[-1] object-cover"
+        />
+      </motion.div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
@@ -121,81 +128,7 @@ const Hero = () => {
           transition={{ duration: 1.2, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <div className="mb-6 md:mb-0">
-            <Link href="/about" className="hover:text-[#ff5c00]">
-              The Studio
-            </Link>
-          </div>
-          <div className="flex flex-col md:flex-row md:space-x-48">
-            <div className="mb-6 md:mb-0">
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/works" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
-                    Works
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
-                    Studio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/news" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
-                    News
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="space-y-4 md:pr-24">
-                <p>
-                  <a href="mailto:info@company.com" className="hover:text-[#ff5c00]">
-                    info@company.com
-                  </a>
-                </p>
-                <p className="hover:text-[#ff5c00]">+254745253664</p>
-                <div className="flex space-x-4 mt-4">
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-500 transition-colors duration-500"
-                  >
-                    <FaFacebookF size={20} />
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-black transition-colors duration-500"
-                  >
-                    <FaXTwitter size={20} />
-                  </a>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-pink-500 transition-colors duration-500"
-                  >
-                    <FaInstagram size={20} />
-                  </a>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-700 transition-colors duration-500"
-                  >
-                    <FaLinkedinIn size={20} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Add links here */}
         </motion.div>
       </div>
     </div>
@@ -203,4 +136,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
