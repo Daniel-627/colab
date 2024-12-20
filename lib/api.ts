@@ -8,7 +8,7 @@ export async function fetchColabPosts(): Promise<Post[]> {
       _id,
       title,
       slug,
-      mainImage{asset->{url}},
+      mainImage,
       description,
       "author": author->name,
       "latestCategory": categories[-1]->title,
