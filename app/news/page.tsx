@@ -30,7 +30,7 @@ export default function Page() {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Banner */}
-      <div className="relative bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white">
+      <div className="relative bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white py-32">
         <motion.div
           className="absolute right-8 text-4xl md:text-6xl lg:text-9xl py-2 mx-4 top-24 lg:right-1"
           initial={{ opacity: 0, y: -50 }}
@@ -47,8 +47,7 @@ export default function Page() {
           transition={{ duration: 1.6 }}
           viewport={{ once: true }}
         >
-          Discover insights, stories, and updates in our blog section. Scroll to
-          explore more.
+          Discover insights, stories, and updates in our blog section. Scroll to explore more.
         </motion.p>
         <motion.div
           className="absolute bottom-8 right-8 text-white flex flex-col items-center"
@@ -84,13 +83,17 @@ export default function Page() {
             >
               <Link href={`/news/${encodeURIComponent(post.slug.current)}`} passHref>
                 <div>
-                  {urlFor(post.mainImage).url() && (
+                  {post.mainImage ? (
                     <img
                       src={urlFor(post.mainImage).url()}
-                      alt={post.title}
+                      alt={post.title || 'Blog Image'}
                       className="object-cover w-full rounded-lg shadow-md"
                       style={{ aspectRatio: '3/2' }}
                     />
+                  ) : (
+                    <div className="w-full rounded-lg shadow-md bg-gray-300" style={{ aspectRatio: '3/2' }}>
+                      <p className="text-center text-gray-500">No Image</p>
+                    </div>
                   )}
                   <h2 className="mt-2 text-lg font-medium">{post.title}</h2>
                   <p className="text-sm text-gray-500 mt-1">
