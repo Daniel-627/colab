@@ -122,20 +122,15 @@ const Hero = () => {
 
         {/* Links */}
         <motion.div
-          className="flex flex-col md:flex-row md:justify-between"
+          className="flex flex-col md:flex-row justify-start md:justify-between w-full gap-x-4"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          {/* links */}
-          <motion.div
-          className="flex flex-col md:flex-row md:justify-between"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
-          >
-            <div className="mb-6 md:mb-0">
+        
+          
+            <div className="item-center ">
               <Link href="/about" className="hover:text-[#ff5c00]">
                 The Studio
               </Link>
@@ -210,7 +205,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+
         </motion.div>
       </div>
     </div>
