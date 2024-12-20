@@ -42,18 +42,11 @@ const Hero = () => {
     <div
       className="relative w-full h-[200vh] md:h-[250vh] lg:h-[300vh] bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/img7.webp')",
+        backgroundImage: "url('/img7.jpg ')",
         backgroundSize: "cover",
       }}
     >
-      {/* Fallback for JPEG */}
-      <noscript>
-        <style>
-          {`.relative {
-            background-image: url('/img7.jpg');
-          }`}
-        </style>
-      </noscript>
+      
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
