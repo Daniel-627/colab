@@ -102,9 +102,9 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <span className="block text-left">Design,</span>
-          <span className="block text-left md:text-center">Develop,</span>
-          <span className="block text-left md:text-right">Experience.</span>
+          <span className="block text-left hover:text-[#ff073a]">Design,</span>
+          <span className="block text-left md:text-center hover:text-[#ff5c00]">Develop,</span>
+          <span className="block text-left md:text-right hover:text-[#ff073a]">Experience.</span>
         </motion.h1>
 
         {/* Description */}

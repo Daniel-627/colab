@@ -86,7 +86,7 @@ const Navbar = () => {
         <div className="absolute flex flex-col top-16 right-6 bg-gradient-to-br from-[#ff073a] to-[#ff5c00] text-white rounded-md shadow-md w-64 p-6">
 
           <motion.div
-            className="flex flex-row items-center space-x-3 cursor-pointer"
+            className="flex flex-col items-center space-x-3 cursor-pointer pt-4 pb-6"
             whileHover={{ scale: 1.05 }}
           >
             <Link href="/">

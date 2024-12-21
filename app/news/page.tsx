@@ -27,10 +27,9 @@ export default function Page() {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100">
       {/* Banner */}
-      
-      <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white overflow-hidden">
+      <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white flex items-center justify-center">
         <motion.div
           className="absolute right-8 text-4xl md:text-6xl lg:text-9xl py-2 mx-4 top-24 lg:right-1"
           initial={{ opacity: 0, y: -50 }}
@@ -71,7 +70,7 @@ export default function Page() {
 
       {/* Masonry Layout */}
       <div className="px-4 py-16">
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6 border-r-2 ">
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
           {posts.map((post) => (
             <motion.div
               key={post._id}
@@ -95,4 +94,3 @@ export default function Page() {
     </div>
   );
 }
-
