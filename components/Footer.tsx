@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import Link from 'next/link';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer: React.FC = () => {
   return (
@@ -46,16 +47,16 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/works" className="hover:text-[#ff073a] transition-colors duration-200">Works</a>
+                <a href="/works" className="hover:text-[#ff073a] hover:underline transition-colors duration-200">Works</a>
               </li>
               <li>
-                <a href="/about" className="hover:text-[#ff073a] transition-colors duration-200">Studio</a>
+                <a href="/about" className="hover:text-[#ff073a] hover:underline transition-colors duration-200">Studio</a>
               </li>
               <li>
-                <a href="/news" className="hover:text-[#ff073a] transition-colors duration-200">News</a>
+                <a href="/news" className="hover:text-[#ff073a] hover:underline transition-colors duration-200">News</a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-[#ff073a] transition-colors duration-200">Contact</a>
+                <a href="/contact" className="hover:text-[#ff073a] hover:underline transition-colors duration-200">Contact</a>
               </li>
             </ul>
           </motion.div>
@@ -74,8 +75,8 @@ const Footer: React.FC = () => {
             </div>
             <div className="mt-6 space-y-4">
               <h3 className="text-lg font-semibold">Contact Us</h3>
-              <p><a href="mailto:info@company.com" className="hover:text-[#ff073a]">info@company.com</a></p>
-              <p>1234 Example Street, Kisumu, Kenya</p>
+              <p><a href="mailto:info@company.com" className="hover:text-[#ff073a] hover:underline">info@company.com</a></p>
+              <p className='hover:text-[#ff073a] hover:underline'>1234 Example Street, Kisumu, Kenya</p>
               <div className="flex space-x-4 mt-4">
                 <a
                   href="https://facebook.com"
@@ -89,9 +90,9 @@ const Footer: React.FC = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
-                  <FaTwitter size={20} />
+                  <FaXTwitter size={20} />
                 </a>
                 <a
                   href="https://instagram.com"

@@ -66,7 +66,7 @@ export default function Companies({}: Props) {
           {companies.map((company) => (
             <motion.div
               key={company.index}
-              className="bg-transparent p-4 md:p-6 rounded-lg text-center border-2 border-gray-300"
+              className="bg-transparent p-4 md:p-6 rounded-lg text-center border-2 border-gray-300 hover:border-[#ff5c00]"
               variants={itemVariants}
             >
               <img

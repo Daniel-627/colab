@@ -29,7 +29,8 @@ export default function Page() {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Banner */}
-      <div className="relative bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white py-32">
+      
+      <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white overflow-hidden">
         <motion.div
           className="absolute right-8 text-4xl md:text-6xl lg:text-9xl py-2 mx-4 top-24 lg:right-1"
           initial={{ opacity: 0, y: -50 }}
@@ -70,11 +71,11 @@ export default function Page() {
 
       {/* Masonry Layout */}
       <div className="px-4 py-16">
-        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6 border-r-2 ">
           {posts.map((post) => (
             <motion.div
               key={post._id}
-              className="break-inside-avoid bg-white p-4 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-shadow"
+              className="break-inside-avoid p-4 cursor-pointer border-l-2 hover:border-[#ff5c00]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: 'easeOut' }}

@@ -38,7 +38,7 @@ export default function Services({}: Props) {
         transition={{ duration: 1.5, staggerChildren: 0.3 }}
       >
         <motion.h1
-          className="text-6xl font-bold text-gray-800"
+          className="text-6xl font-bold text-gray-800 hover:text-[#ff5c00]"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -80,7 +80,7 @@ export default function Services({}: Props) {
               }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-xl font-semibold text-gray-800">
+              <h2 className="text-xl font-semibold text-gray-800 hover:text-[#ff5c00]">
                 {service.title}
               </h2>
               <p className="text-base font-light text-gray-600">

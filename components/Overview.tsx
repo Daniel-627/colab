@@ -42,7 +42,7 @@ const Overview = () => {
           </p>
           <div className="flex flex-col md:flex-row md:space-x-4">
             <div className="sm:my-4 md:my-0">
-              <h3 className="text-base sm:text-lg py-2 px-4 border-2 rounded-3xl inline-block">
+              <h3 className="text-base sm:text-lg py-2 px-4 border-2 hover:border-[#ff5c00] hover:text-white rounded-3xl inline-block hover:bg-[#ff5c00]">
                 Overview
               </h3>
             </div>

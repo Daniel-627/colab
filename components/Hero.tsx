@@ -131,7 +131,7 @@ const Hero = () => {
         
           
             <div className="item-center mb-8 md:mb-0">
-              <Link href="/about" className="hover:text-[#ff5c00]">
+              <Link href="/about" className="hover:text-[#ff5c00] hover:underline">
                 The Studio
               </Link>
             </div>
@@ -139,22 +139,22 @@ const Hero = () => {
               <div className="mb-8 md:mb-0">
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/works" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                    <Link href="/works" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
                       Works
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                    <Link href="/about" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
                       Studio
                     </Link>
                   </li>
                   <li>
-                    <Link href="/news" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                    <Link href="/news" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
                       News
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="hover:text-[#ff073a] transition-colors duration-200 text-sm">
+                    <Link href="/contact" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
                       Contact
                     </Link>
                   </li>
@@ -163,17 +163,17 @@ const Hero = () => {
               <div>
                 <div className="space-y-4 md:pr-24">
                   <p>
-                    <a href="mailto:info@company.com" className="hover:text-[#ff5c00]">
+                    <a href="mailto:info@company.com" className="hover:text-[#ff5c00] hover:underline">
                       info@company.com
                     </a>
                   </p>
-                  <p className="hover:text-[#ff5c00]">+254745253664</p>
+                  <p className="hover:text-[#ff5c00] hover:underline">+254745253664</p>
                   <div className="flex space-x-4 mt-4">
                     <a
                       href="https://facebook.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-500 transition-colors duration-500"
+                      className="text-gray-500 hover:text-blue-500 transition-colors duration-500"
                     >
                       <FaFacebookF size={20} />
                     </a>
@@ -181,7 +181,7 @@ const Hero = () => {
                       href="https://twitter.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-black transition-colors duration-500"
+                      className="text-gray-500 hover:text-white transition-colors duration-500"
                     >
                       <FaXTwitter size={20} />
                     </a>
@@ -189,7 +189,7 @@ const Hero = () => {
                       href="https://instagram.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-pink-500 transition-colors duration-500"
+                      className="text-gray-500 hover:text-pink-500 transition-colors duration-500"
                     >
                       <FaInstagram size={20} />
                     </a>
@@ -197,7 +197,7 @@ const Hero = () => {
                       href="https://linkedin.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-blue-700 transition-colors duration-500"
+                      className="text-gray-500 hover:text-blue-700 transition-colors duration-500"
                     >
                       <FaLinkedinIn size={20} />
                     </a>

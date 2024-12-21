@@ -6,6 +6,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +83,27 @@ const Navbar = () => {
 
       {/* Collapsible Menu */}
       {isOpen && (
-        <div className="absolute top-16 right-6 bg-gradient-to-br from-[#ff073a] to-[#ff5c00] text-white rounded-md shadow-md w-64 p-6">
+        <div className="absolute flex flex-col top-16 right-6 bg-gradient-to-br from-[#ff073a] to-[#ff5c00] text-white rounded-md shadow-md w-64 p-6">
+
+          <motion.div
+            className="flex flex-row items-center space-x-3 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Link href="/">
+              <Image
+                src="/logos/logo1.png"
+                alt="Colab Kenya Logo"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+            </Link>
+            <Link href="/">
+              <h1 className="text-lg font-semibold md:text-2xl md:font-bold text-white hover:text-[#2007ff]">
+                Colab Kenya
+              </h1>
+            </Link>
+          </motion.div>
           <motion.ul
             className="flex flex-col items-center space-y-4"
             initial={{ opacity: 0 }}
@@ -92,7 +113,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/works"
-                className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
                 onClick={closeMenu}
               >
                 Work
@@ -101,7 +122,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/about"
-                className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
                 onClick={closeMenu}
               >
                 Studio
@@ -110,7 +131,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/news"
-                className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
                 onClick={closeMenu}
               >
                 News
@@ -119,7 +140,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/contact"
-                className="hover:text-[#ff5c00] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
                 onClick={closeMenu}
               >
                 Contact
@@ -129,7 +150,7 @@ const Navbar = () => {
 
           {/* Social Icons */}
           <motion.div
-            className="flex justify-center space-x-4 border-t border-gray-700 pt-4 mt-4"
+            className="flex flex-row justify-center space-x-4 border-t border-gray-700 pt-4 mt-4"
             initial="hidden"
             animate="visible"
             variants={{
@@ -145,18 +166,18 @@ const Navbar = () => {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-blue-400"
+              className="text-xl hover:text-black transition-colors duration-500"
               aria-label="Twitter"
               whileHover={{ scale: 1.2, rotate: 10 }}
               whileTap={{ scale: 0.9 }}
             >
-              <FaTwitter />
+              <FaXTwitter />
             </motion.a>
             <motion.a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-blue-700"
+              className="text-xl hover:text-blue-700 transition-colors duration-500"
               aria-label="LinkedIn"
               whileHover={{ scale: 1.2, rotate: 10 }}
               whileTap={{ scale: 0.9 }}
@@ -167,7 +188,7 @@ const Navbar = () => {
               href="https://wa.me"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-green-500"
+              className="text-xl hover:text-green-500 transition-colors duration-500"
               aria-label="WhatsApp"
               whileHover={{ scale: 1.2, rotate: 10 }}
               whileTap={{ scale: 0.9 }}
