@@ -82,7 +82,7 @@ const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 
   return (
-    <div className='p-4'>
+    <div className='p-4 max-w-md flex items-center'>
       <form className="flex flex-col space-y-1">
         <p className='pt-2'>Name*</p>
         <input

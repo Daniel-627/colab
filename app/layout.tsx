@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Colab Kenya",
-  description: "Creating Experience, Together.",
+  title: "Colab Studios",
+  description: "Creating Experiences, Together.",
 };
 
 export default function RootLayout({

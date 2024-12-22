@@ -35,7 +35,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[200vh]">
+    <div className="relative w-full h-[150vh] md:h-[200vh]">
       {/* Background Image */}
       <motion.div
         className="absolute inset-0"
@@ -71,10 +71,34 @@ const Hero = () => {
           <span className="block text-left md:text-right hover:text-[#ff073a] transition-colors duration-300">Together.</span>
         </motion.h1>
 
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute right-8 top-96 flex flex-col items-center space-y-2"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <p className="text-white text-sm md:text-base">Scroll</p>
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-[#2007ff] animate-bounce"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </motion.svg>
+        </motion.div>
+
         {/* Bottom Left Paragraph */}
         <motion.p
           className="text-sm md:text-xl rellax absolute bottom-16 left-8 md:bottom-8 lg:bottom-12 lg:left-12 lg:text-xl max-w-md text-left text-white"
-          data-rellax-speed="2"
+          data-rellax-speed="1"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -91,33 +115,9 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Our mission is to bring your vision to life with sleek designs, seamless functionality, and a user-centered approach.
-          From responsive websites to interactive interfaces, we ensure your digital identity stands out in today's competitive landscape.
+          A logo is not a brand. A brand is not an identity. A brand is not a product... A brand is someones gut feeling about a product, 
+          service or organisation. - Matt Neumerier: The Brand Gap.
         </motion.p>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <p className="text-white text-sm md:text-base">Scroll</p>
-          <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white animate-bounce"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M19 9l-7 7-7-7"
-            />
-          </motion.svg>
-        </motion.div>
       </div>
     </div>
   );
