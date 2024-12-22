@@ -85,7 +85,7 @@ const Hero = () => {
               viewBox="0 0 24 24"
               strokeWidth="2"
               stroke="currentColor"
-              className="w-6 h-6 animate-bounce"
+              className="w-6 h-6 animate-bounce text-[#2007ff]"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
@@ -102,9 +102,9 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <span className="block text-left hover:text-[#ff073a]">Design,</span>
-          <span className="block text-left md:text-center hover:text-[#ff5c00]">Develop,</span>
-          <span className="block text-left md:text-right hover:text-[#ff073a]">Experience.</span>
+          <span className="block text-left hover:text-[#2007ff] transition-colors duration-300">Design,</span>
+          <span className="block text-left md:text-center hover:text-[#ff5c00] transition-colors duration-300">Develop,</span>
+          <span className="block text-left md:text-right hover:text-[#ff073a] transition-colors duration-300">Experience.</span>
         </motion.h1>
 
         {/* Description */}
@@ -131,7 +131,7 @@ const Hero = () => {
         
           
             <div className="item-center mb-8 md:mb-0">
-              <Link href="/about" className="hover:text-[#ff5c00] hover:underline">
+              <Link href="/about" className="hover:text-[#ff5c00] hover:underline transition-colors duration-50">
                 The Studio
               </Link>
             </div>
@@ -139,22 +139,22 @@ const Hero = () => {
               <div className="mb-8 md:mb-0">
                 <ul className="space-y-2">
                   <li>
-                    <Link href="/works" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
+                    <Link href="/works" className="hover:text-[#ff073a] hover:underline transition-colors duration-500 text-sm">
                       Works
                     </Link>
                   </li>
                   <li>
-                    <Link href="/about" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
+                    <Link href="/about" className="hover:text-[#ff073a] hover:underline transition-colors duration-500 text-sm">
                       Studio
                     </Link>
                   </li>
                   <li>
-                    <Link href="/news" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
+                    <Link href="/news" className="hover:text-[#ff073a] hover:underline transition-colors duration-500 text-sm">
                       News
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact" className="hover:text-[#ff073a] hover:underline transition-colors duration-200 text-sm">
+                    <Link href="/contact" className="hover:text-[#ff073a] hover:underline transition-colors duration-500 text-sm">
                       Contact
                     </Link>
                   </li>
@@ -163,11 +163,11 @@ const Hero = () => {
               <div>
                 <div className="space-y-4 md:pr-24">
                   <p>
-                    <a href="mailto:info@company.com" className="hover:text-[#ff5c00] hover:underline">
+                    <a href="mailto:info@company.com" className="hover:text-[#ff5c00] hover:underline transition-colors duration-500">
                       info@company.com
                     </a>
                   </p>
-                  <p className="hover:text-[#ff5c00] hover:underline">+254745253664</p>
+                  <p className="hover:text-[#ff5c00] hover:underline transition-colors duration-500">+254745253664</p>
                   <div className="flex space-x-4 mt-4">
                     <a
                       href="https://facebook.com"

@@ -14,11 +14,7 @@ export const metadata = {
 export default function WorksLayout({ children }: { children: ReactNode }) {
     return (
         <div className='bg-gray-100 min-h-screen overflow-hidden'>
-            <WorksBanner />
-            <WorksNav />
-            <div>
-                {children}
-            </div>
+            {children}
         </div>
     );
 }

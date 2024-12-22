@@ -86,7 +86,7 @@ const Navbar = () => {
         <div className="absolute flex flex-col top-16 right-6 bg-gradient-to-br from-[#ff073a] to-[#ff5c00] text-white rounded-md shadow-md w-64 p-6">
 
           <motion.div
-            className="flex flex-col items-center space-x-3 cursor-pointer pt-4 pb-6"
+            className="flex flex-col items-center space-x-3 cursor-pointer pt-2 pb-6"
             whileHover={{ scale: 1.05 }}
           >
             <Link href="/">
@@ -99,7 +99,7 @@ const Navbar = () => {
               />
             </Link>
             <Link href="/">
-              <h1 className="text-lg font-semibold md:text-2xl md:font-bold text-white hover:text-[#2007ff]">
+              <h1 className="text-lg font-semibold md:text-2xl md:font-bold text-white hover:text-[#2007ff] transition-colors duration-300">
                 Colab Kenya
               </h1>
             </Link>
@@ -113,7 +113,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/works"
-                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-500 text-sm font-light"
                 onClick={closeMenu}
               >
                 Work
@@ -122,7 +122,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/about"
-                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-500 text-sm font-light"
                 onClick={closeMenu}
               >
                 Studio
@@ -131,7 +131,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/news"
-                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-500 text-sm font-light"
                 onClick={closeMenu}
               >
                 News
@@ -140,7 +140,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/contact"
-                className="hover:text-[#2007ff] hover:underline transition-all duration-300 text-sm font-light"
+                className="hover:text-[#2007ff] hover:underline transition-all duration-500 text-sm font-light"
                 onClick={closeMenu}
               >
                 Contact

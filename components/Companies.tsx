@@ -49,8 +49,8 @@ export default function Companies({}: Props) {
           transition={{ duration: 1.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-4xl font-bold">Our Partners</h2>
-          <p className="mt-4 text-sm md:text-base">
+          <h2 className="text-2xl md:text-4xl font-bold hover:text-[#ff5c00] transition-colors duration-300">Our Partners</h2>
+          <p className="mt-4 text-sm md:text-base hover:text-[#ff5c00] transition-colors duration-300">
             We are proud to collaborate with some of the most innovative companies in the industry.
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ export default function Companies({}: Props) {
           {companies.map((company) => (
             <motion.div
               key={company.index}
-              className="bg-transparent p-4 md:p-6 rounded-lg text-center border-2 border-gray-300 hover:border-[#ff5c00]"
+              className="bg-transparent p-4 md:p-6 rounded-lg text-center border-2 border-gray-300 hover:border-[#ff5c00] transition-colors duration-300"
               variants={itemVariants}
             >
               <img

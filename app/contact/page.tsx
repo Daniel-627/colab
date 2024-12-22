@@ -14,7 +14,7 @@ const page = () => {
       {/* Banner */}
       <div className="relative min-h-screen bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-white overflow-hidden">
         <motion.h1
-          className="absolute right-8 text-5xl font-bold top-24 lg:right-16"
+          className="absolute right-8 text-5xl font-bold top-24 lg:right-16 hover:text-[#2007ff] transition-colors duration-300"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}

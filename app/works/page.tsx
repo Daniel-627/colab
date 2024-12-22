@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { ProjectsProps, Project } from '@/utils/Interface';
 import { urlFor } from '@/sanity/lib/image';
 import { BiArrowToRight, BiLink } from 'react-icons/bi';
+import WorksBanner from '@/components/WorksBanner';
+import WorksNav from '@/components/WorksNav';
 
 async function getProjects(): Promise<Project[]> {
   const query = `
@@ -40,7 +42,8 @@ export default function page() {
 
   return (
     <div className="">
-      
+      <WorksBanner />
+      <WorksNav />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-4 py-16 px-4 md:px-8 border-r-2">
         {projects.map((project) => (
           <motion.div

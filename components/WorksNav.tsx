@@ -17,7 +17,7 @@ export default function WorksNav({}: Props) {
         >
             <Link href="/works">
                 <motion.button
-                    className="text-white bg-[#ff073a] px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl hover:bg-[#ff5c00] transition duration-300"
+                    className="text-white px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] hover:bg-gradient-to-br hover:from-[#2007ff] hover:via-[#ff073a] hover:to-[#ff5c00] transition-colors duration-500"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                 >
@@ -26,7 +26,7 @@ export default function WorksNav({}: Props) {
             </Link>
             <Link href="/works/posters">
                 <motion.button
-                    className="text-white bg-[#ff073a] px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl hover:bg-[#ff5c00] transition duration-300"
+                    className="text-white px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] hover:bg-gradient-to-br hover:from-[#2007ff] hover:via-[#ff073a] hover:to-[#ff5c00] transition-colors duration-500"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                 >

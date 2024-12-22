@@ -10,7 +10,6 @@ import { BiArrowToRight, BiLink } from 'react-icons/bi';
 
 async function getProjects(): Promise<Project[]> {
   const query = `
-  
   *[_type == 'project'] | order(_updatedAt desc)[0...3] {
       title,
       _id,
@@ -49,10 +48,10 @@ export default function Works() {
           transition={{ duration: 1.6, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl md:text-6xl lg:text-9xl py-2 hover:text-[#ff5c00]">Works</h1>
+          <h1 className="text-4xl md:text-6xl lg:text-9xl py-2 hover:text-[#ff5c00] transition-colors duration-300">Works</h1>
           <Link href="/works">
             <motion.button
-              className="text-white bg-[#ff073a] px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl hover:bg-[#ff5c00] transition duration-300"
+              className="text-white px-6 py-2 md:mr-8 text-lg font-medium rounded-3xl bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] hover:bg-gradient-to-br hover:from-[#2007ff] hover:via-[#ff073a] hover:to-[#ff5c00] transition-colors duration-500"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -66,15 +65,15 @@ export default function Works() {
         {projects.map((project) => (
           <motion.div
             key={project._id}
-            className="border-l-2 p-4 space-y-4 hover:border-[#ff5c00]"
+            className="border-l-2 p-4 space-y-4 hover:border-[#ff5c00] transition-colors duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <p className="font-extralight text-xs hover:text-[#ff5c00]">P0{project.projectNumber}</p>
-            <p className="font-light text-sm px-2 hover:text-[#ff5c00]">{project.description}</p>
-            <h1 className="font-medium text-lg px-3 hover:text-[#ff5c00]">{project.title}</h1>
+            <p className="font-extralight text-xs hover:text-[#ff5c00] transition-colors duration-300">P0{project.projectNumber}</p>
+            <p className="font-light text-sm px-2 hover:text-[#ff5c00] transition-colors duration-300">{project.description}</p>
+            <h1 className="font-medium text-lg px-3 hover:text-[#ff5c00] transition-colors duration-300">{project.title}</h1>
             <motion.img
               src={urlFor(project.mainImage).url()}
               alt={project.title}
@@ -92,7 +91,7 @@ export default function Works() {
                 <Link href={`/works/${project.slug?.current}`} passHref>
                   <BiArrowToRight
                     size={20}
-                    className="text-black hover:text-[#ff073a] transition-colors duration-300"
+                    className="text-black hover:text-[#ff073a] transition-colors duration-500"
                   />
                 </Link>
               </motion.div>
@@ -104,7 +103,7 @@ export default function Works() {
                   <Link href={project.projectUrl} passHref>
                     <BiLink
                       size={20}
-                      className="text-black hover:text-[#ff073a] transition-colors duration-300"
+                      className="text-black hover:text-[#ff073a] transition-colors duration-500"
                     />
                   </Link>
                 </motion.div>

@@ -27,7 +27,7 @@ const CreativeProcess = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-gray-100">
+    <section className="py-32 bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] text-gray-100 rounded-t-2xl">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold text-center mb-12"
@@ -48,12 +48,12 @@ const CreativeProcess = () => {
               transition={{ duration: 1.6, delay: index * 0.5 }}
             >
               <div className="flex items-center mb-6">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#ff073a] text-white font-bold text-lg rounded-full">
+                <div className="flex items-center justify-center w-12 h-12 text-white font-medium text-6xl rounded-full">
                   {index + 1}
                 </div>
-                <h3 className="text-2xl font-semibold ml-4">{step.title}</h3>
+                <h3 className="text-2xl font-medium ml-4">{step.title}</h3>
               </div>
-              <p className="text-gray-100 leading-relaxed mt-4">{step.description}</p>
+              <p className="text-gray-100 leading-relaxed mt-4 font-medium">{step.description}</p>
             </motion.div>
           ))}
         </div>

@@ -5,6 +5,7 @@ import { client } from '@/sanity/lib/client';
 import { motion } from 'framer-motion';
 import { urlFor } from '@/sanity/lib/image';
 import { Posters } from '@/utils/Interface';
+import WorksNav from '@/components/WorksNav';
 
 async function getPosters(): Promise<Posters[]> {
   const query = `
@@ -37,8 +38,10 @@ export default function PostersPage() {
 
   return (
     <div className="">
-      
-
+      <div className='h-20 w-full bg-gradient-to-br from-[#2007ff] via-[#ff5c00] to-[#ff073a]'></div>
+      <div className=''>
+        <WorksNav />
+      </div>
       {/* Posters Grid */}
       <div className="px-4 py-16">
         {error ? (

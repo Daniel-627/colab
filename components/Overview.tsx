@@ -42,7 +42,7 @@ const Overview = () => {
           </p>
           <div className="flex flex-col md:flex-row md:space-x-4">
             <div className="sm:my-4 md:my-0">
-              <h3 className="text-base sm:text-lg py-2 px-4 border-2 hover:border-[#ff5c00] hover:text-white rounded-3xl inline-block hover:bg-[#ff5c00]">
+              <h3 className="text-base sm:text-lg py-2 px-4 border-2 hover:border-[#ff5c00] hover:text-white rounded-3xl inline-block hover:bg-[#ff5c00] transition-colors duration-300">
                 Overview
               </h3>
             </div>
@@ -59,7 +59,7 @@ const Overview = () => {
               <div className="flex justify-center md:justify-start gap-4">
                 <Link href="/about">
                   <motion.button
-                    className="bg-[#ff073a] hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
+                    className="px-4 py-2 sm:px-6 sm:py-3 rounded-3xl font-semibold text-white shadow-md bg-gradient-to-br from-[#ff073a] via-[#ff5c00] to-[#ff073a] hover:bg-gradient-to-br hover:from-[#2007ff] hover:via-[#ff073a] hover:to-[#ff5c00] transition-colors duration-500"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
