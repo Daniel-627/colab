@@ -8,7 +8,7 @@ type Props = {}
 
 export default function WorksNav({}: Props) {
   return (
-    <div className='flex flex-row py-8 px-4'>
+    <div className='flex flex-row py-8 px-4 space-x-3'>
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

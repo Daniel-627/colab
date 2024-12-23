@@ -48,7 +48,7 @@ export default function PostersPage() {
           <p className="text-center text-red-500">{error}</p>
         ) : (
           <div
-            className="columns-2 md:columns-3 lg:columns-4 gap-2 md:gap-4 space-y-4"
+            className="columns-1 md:columns-2 lg:columns-3 gap-2 md:gap-4 space-y-4"
           >
             {posters.map((poster) => (
               <motion.div

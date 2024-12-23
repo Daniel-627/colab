@@ -40,7 +40,7 @@ export default function Page() {
           News
         </motion.div>
         <motion.p
-          className="absolute bottom-16 md:bottom-8 left-8 text-lg lg:text-xl max-w-md text-left"
+          className="absolute bottom-16 left-8 text-lg lg:text-xl max-w-md text-left"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6 }}

@@ -21,7 +21,7 @@ export default function WorksBanner({}: Props) {
                 </motion.div>
 
                 <motion.p
-                    className="absolute bottom-16 md:bottom-8 left-8 text-lg lg:text-xl max-w-md text-left"
+                    className="absolute bottom-16 left-8 text-lg lg:text-xl max-w-md text-left"
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.6 }}
@@ -33,7 +33,7 @@ export default function WorksBanner({}: Props) {
 
                 {/* Scroll Arrow */}
                 <motion.div
-                    className="absolute bottom-8 right-8 text-white flex flex-col items-center"
+                    className="absolute bottom-10 right-8 text-white flex flex-col items-center"
                     initial={{ y: 0 }}
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}

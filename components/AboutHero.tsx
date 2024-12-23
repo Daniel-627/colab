@@ -35,7 +35,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[150vh] md:h-[200vh]">
+    <div className="relative w-full h-[100vh] lg:h-[200vh]">
       {/* Background Image */}
       <motion.div
         className="absolute inset-0"
@@ -97,7 +97,7 @@ const Hero = () => {
 
         {/* Bottom Left Paragraph */}
         <motion.p
-          className="text-sm md:text-xl rellax absolute bottom-16 left-8 md:bottom-8 lg:bottom-12 lg:left-12 lg:text-xl max-w-md text-left text-white"
+          className="text-sm md:text-xl rellax absolute bottom-32 left-8 lg:bottom-12 lg:left-12 lg:text-xl max-w-md text-left text-white"
           data-rellax-speed="1"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
