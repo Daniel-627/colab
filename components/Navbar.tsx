@@ -98,7 +98,7 @@ const Navbar = () => {
                 className="rounded-full"
               />
             </Link>
-            <Link href="/">
+            <Link href="/" onClick={closeMenu}>
               <h1 className="text-lg font-semibold md:text-2xl md:font-bold text-white hover:text-[#2007ff] transition-colors duration-300">
                 Colab Kenya
               </h1>

@@ -78,7 +78,7 @@ const Hero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <p className="text-white text-sm md:text-base">Scroll</p>
+          <p className="text-white text-sm hidden md:block md:text-base">Scroll</p>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-[#2007ff] animate-bounce"
@@ -97,7 +97,7 @@ const Hero = () => {
 
         {/* Bottom Left Paragraph */}
         <motion.p
-          className="text-sm md:text-xl rellax absolute bottom-32 left-8 lg:bottom-12 lg:left-12 lg:text-xl max-w-md text-left text-white"
+          className="hidden md:block text-sm md:text-xl rellax absolute bottom-32 left-8 lg:bottom-12 lg:left-12 lg:text-xl max-w-md text-left text-white"
           data-rellax-speed="1"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

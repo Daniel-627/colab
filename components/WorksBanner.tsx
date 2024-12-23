@@ -38,7 +38,7 @@ export default function WorksBanner({}: Props) {
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                <span className="text-lg">Scroll</span>
+                <span className="hidden md:block text-lg">Scroll</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
