@@ -7,6 +7,7 @@ import {
 import EmailForm from '@/components/EmailForm';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import StartProject from '../../components/StartProject';
 
 const page = () => {
   return (
@@ -145,28 +146,8 @@ const page = () => {
           <EmailForm />
         </motion.div>
       </div>
-      <div className='w-full flex justify-center items-center py-8'>
-        <motion.div
-            className="flex flex-col items-center"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            viewport={{ once: true }}
-          >
-            <h1 className="text-4xl font-semibold mb-4">We would love to hear from you.</h1>
-            <p className="text-lg font-extralight mb-4">
-              Book a free consultation now to discover how we can help your business thrive!
-            </p>
-            <Link href="/contact/contact2">
-              <motion.button
-                className="bg-[#ff073a]  hover:bg-[#ff5c00] px-4 py-2 sm:px-6 sm:py-3 transition-colors duration-300 rounded-3xl font-semibold text-white shadow-md"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Start a Project
-              </motion.button>
-            </Link>
-          </motion.div>
+      <div className=' py-8'>
+        <StartProject />
       </div>
     </div>
   );
