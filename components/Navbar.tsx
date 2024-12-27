@@ -91,7 +91,7 @@ const Navbar = () => {
           >
             <Link href="/">
               <Image
-                src="/logos/logo1.png"
+                src="/logos/logo2.png"
                 alt="Colab Kenya Logo"
                 width={40}
                 height={40}

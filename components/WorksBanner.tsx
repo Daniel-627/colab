@@ -33,7 +33,7 @@ export default function WorksBanner({}: Props) {
 
                 {/* Scroll Arrow */}
                 <motion.div
-                    className="absolute bottom-10 right-8 text-white flex flex-col items-center"
+                    className="absolute bottom-11 right-8 text-white flex flex-col items-center"
                     initial={{ y: 0 }}
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
