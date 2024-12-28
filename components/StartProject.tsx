@@ -68,7 +68,6 @@ const StartProject: React.FC = () => {
             className="flex flex-col items-center bg-[#2007ff] text-white p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="text-white mb-4">{card.icon}</div>
             <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
             <p className="text-sm text-center mb-4">{card.description}</p>
 
