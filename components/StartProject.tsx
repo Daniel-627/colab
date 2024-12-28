@@ -58,7 +58,7 @@ const StartProject: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        Take the first step toward realizing your project. Choose an option below to get started immediately.
+        No need to wait. Take the first step toward realizing your project. Choose an option below to get started.
       </motion.p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-4xl">
@@ -77,16 +77,16 @@ const StartProject: React.FC = () => {
                 <a
                   href="/path-to-your-pdf.pdf"
                   download
-                  className="bg-gradient-to-r from-[#ff5c00] to-[#ff073a] text-white py-2 px-4 rounded hover:opacity-80 transition-opacity"
+                  className="bg-gradient-to-r from-[#ff5c00] to-[#ff073a] text-white p-3 rounded-full hover:opacity-80 transition-opacity"
                 >
-                  Download PDF
+                  <AiOutlineDownload size={20} />
                 </a>
                 <a
                   href="/path-to-your-docx.docx"
                   download
-                  className="bg-gradient-to-r from-[#ff5c00] to-[#ff073a] text-white py-2 px-4 rounded hover:opacity-80 transition-opacity"
+                  className="bg-gradient-to-r from-[#ff5c00] to-[#ff073a] text-white p-3 rounded-full hover:opacity-80 transition-opacity"
                 >
-                  Download Docx
+                  <AiOutlineDownload size={20} />
                 </a>
               </div>
             ) : (
@@ -94,10 +94,9 @@ const StartProject: React.FC = () => {
                 href={card.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white flex items-center gap-2 hover:underline"
+                className="text-white p-3 rounded-full hover:bg-opacity-80 transition-opacity bg-[#2007ff]"
               >
-                <span>Go to Link</span>
-                <FaExternalLinkAlt />
+                {card.icon}
               </a>
             )}
           </motion.div>
@@ -108,3 +107,4 @@ const StartProject: React.FC = () => {
 };
 
 export default StartProject;
+
