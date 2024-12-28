@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { AiOutlineCalendar, AiOutlineWhatsApp, AiOutlineForm, AiOutlineDownload } from 'react-icons/ai';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
 interface Card {
   title: string;
@@ -43,9 +42,9 @@ const StartProject: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-white text-black py-10 px-5">
+    <div className="flex flex-col items-center bg-white text-black py-10 px-5 max-w-screen-xl mx-auto">
       <motion.h1
-        className="text-3xl font-bold mb-4"
+        className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -53,7 +52,7 @@ const StartProject: React.FC = () => {
         Start a Project
       </motion.h1>
       <motion.p
-        className="text-center max-w-2xl mb-8"
+        className="text-sm sm:text-base lg:text-lg text-center max-w-2xl mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -61,15 +60,15 @@ const StartProject: React.FC = () => {
         No need to wait. Take the first step toward realizing your project. Choose an option below to get started.
       </motion.p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-4xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-4xl">
         {cards.map((card, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center bg-[#2007ff] text-white p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             whileHover={{ scale: 1.05 }}
           >
-            <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
-            <p className="text-sm text-center mb-4">{card.description}</p>
+            <h2 className="text-base sm:text-lg font-semibold mb-2">{card.title}</h2>
+            <p className="text-xs sm:text-sm text-center mb-4">{card.description}</p>
 
             {card.isDownload ? (
               <div className="flex gap-2">
@@ -93,7 +92,7 @@ const StartProject: React.FC = () => {
                 href={card.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white p-3 rounded-full hover:bg-opacity-80 transition-opacity bg-[#2007ff]"
+                className="text-white p-3 rounded-full hover:bg-gradient-to-r hover:from-[#ff5c00] hover:to-[#ff073a] transition-transform transform hover:scale-105"
               >
                 {card.icon}
               </a>
@@ -106,4 +105,3 @@ const StartProject: React.FC = () => {
 };
 
 export default StartProject;
-
