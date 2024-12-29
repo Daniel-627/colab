@@ -1,11 +1,21 @@
+'use client'
+
 import React from "react";
 import { services } from "@/data/services";
+import { FiCheckCircle } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const AboutUs: React.FC = () => {
   return (
     <section className="py-16 px-8 bg-gray-50">
       {/* Introduction */}
-      <div className="max-w-3xl mx-auto text-center mb-12">
+      <motion.div 
+        className="max-w-3xl mx-auto text-center mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
         <h1 className="text-4xl font-bold text-gray-800">What Colab Studios Does</h1>
         <p className="text-lg text-gray-600 mt-4">
           At Colab Studios, we specialize in delivering cutting-edge solutions in design, development, branding, and marketing. Our mission is to bring ideas to life with innovation, creativity, and strategy, helping businesses achieve their goals and stand out in today’s competitive market.  
@@ -19,42 +29,61 @@ const AboutUs: React.FC = () => {
         <p className="text-lg text-gray-600 mt-4">
             At Colab Studios, we don’t just work for you—we partner with you to transform your vision into reality, ensuring every project exceeds expectations. Together, we create experiences that leave a lasting impression and empower your brand to thrive.
         </p>
-      </div>
+      </motion.div>
 
       {/* Service List */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {/* Design Services */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">Design</h2>
           {services.design.map((service, index) => (
-            <div key={index} className="p-4 mb-4">
-              <h3 className="text-xl font-bold text-gray-800">{service.title}</h3>
+            <div key={index} className="flex items-start p-4 mb-4">
+              <FiCheckCircle className="text-green-500 mr-2 mt-1" />
+              <p className="text-lg text-gray-800">{service.title}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Development Services */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">Development</h2>
           {services.development.map((service, index) => (
-            <div key={index} className="p-4 mb-4">
-              <h3 className="text-xl font-bold text-gray-800">{service.title}</h3>
+            <div key={index} className="flex items-start p-4 mb-4">
+              <FiCheckCircle className="text-green-500 mr-2 mt-1" />
+              <p className="text-lg text-gray-800">{service.title}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Branding and Marketing Services */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">Branding & Marketing</h2>
           {services.brandingAndMarketing.map((service, index) => (
-            <div key={index} className="p-4 mb-4">
-              <h3 className="text-xl font-bold text-gray-800">{service.title}</h3>
+            <div key={index} className="flex items-start p-4 mb-4">
+              <FiCheckCircle className="text-green-500 mr-2 mt-1" />
+              <p className="text-lg text-gray-800">{service.title}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default AboutUs;
+
