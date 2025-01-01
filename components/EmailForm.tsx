@@ -44,15 +44,15 @@ export default function EmailForm() {
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         {
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
 
       setSubmitMessage('Your message has been sent successfully!')
