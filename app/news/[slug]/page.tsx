@@ -23,7 +23,7 @@ export default async function page({ params }: pageProps) {
   }
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto px-4 py-8">
       {/* Title */}
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
       
@@ -35,7 +35,7 @@ export default async function page({ params }: pageProps) {
         <img
           src={post.mainImage}
           alt={post.title}
-          className="my-4 w-full max-w-3xl object-cover rounded-lg"
+          className="object-cover h-[550px] w-full rounded-3xl mb-4 shadow-l"
         />
       )}
 

@@ -63,13 +63,13 @@ export default async function page({ params }: ProjectPageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-4">
-        <h1 className="text-4xl font-bold text-gray-400 pt-9 md:pt-12">{project.title}</h1>
+        <h1 className="text-4xl font-bold text-gray-900 pt-9 md:pt-12">{project.title}</h1>
         {project.projectUrl && (
           <a
             href={project.projectUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-400 underline text-lg"
+            className="text-blue-700 underline text-lg"
           >
             Visit Website
           </a>
@@ -79,7 +79,7 @@ export default async function page({ params }: ProjectPageProps) {
         <img
           src={urlFor(project.mainImage).url()}
           alt={project.title}
-          className="w-full h-auto mb-4 rounded-lg shadow-lg"
+          className="object-cover h-[550px] w-full rounded-3xl mb-4 shadow-lg"
         />
       )}
       <div className="prose prose-lg text-gray-500 max-w-none">
@@ -95,3 +95,5 @@ export default async function page({ params }: ProjectPageProps) {
 
 // Exporting revalidation option
 export const revalidate = 60; // Revalidate the page every 60 seconds
+
+
