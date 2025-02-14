@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[200vh] md:h-[150vh] lg:h-[300vh]">
+    <div className="relative w-full h-[200vh] lg:h-[300vh]">
       {/* Background Image */}
       <motion.div
         className="absolute inset-0"
@@ -59,7 +59,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col text-white px-6 md:px-10 pt-[300px] md:pt-[400px] space-y-12 md:space-y-28">
+      <div className="relative z-10 flex flex-col text-white px-6 md:px-10 pt-[300px] lg:pt-[400px] space-y-12 md:space-y-28">
         {/* Subtitle */}
         <motion.div
           className="flex flex-col md:flex-row md:justify-between"
@@ -94,7 +94,7 @@ const Hero = () => {
 
         {/* Main Heading */}
         <motion.h1
-          className="text-5xl md:text-[9rem] lg:text-[12rem] leading-tight md:leading-[204px] rellax"
+          className="text-5xl md:text-[10rem] lg:text-[12rem] leading-tight md:leading-[204px] rellax"
           data-rellax-speed="3"
           ref={rellaxRef}
           initial={{ opacity: 0 }}
