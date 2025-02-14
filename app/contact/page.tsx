@@ -147,7 +147,6 @@ const page = () => {
         </motion.div>
       </div>
       <div className=' py-8'>
-        <StartProject />
       </div>
     </div>
   );
