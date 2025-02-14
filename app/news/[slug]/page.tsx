@@ -25,7 +25,7 @@ export default async function page({ params }: pageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Title */}
-      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+      <h1 className="text-4xl font-bold mb-4 pt-9 md:pt-12">{post.title}</h1>
       
       {/* Published Date */}
       <p className="text-gray-600">Published on: {new Date(post.publishedAt).toDateString()}</p>
@@ -35,7 +35,7 @@ export default async function page({ params }: pageProps) {
         <img
           src={post.mainImage}
           alt={post.title}
-          className="object-cover h-[550px] w-full rounded-3xl mb-4 shadow-l"
+          className="object-cover h-[550px] w-full rounded-3xl mb-4 shadow-lg"
         />
       )}
 

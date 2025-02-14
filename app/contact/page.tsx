@@ -67,9 +67,8 @@ const page = () => {
           >
             <h2 className="text-xl font-bold mb-4">Telephone Numbers</h2>
             <ul className="space-y-2 text-gray-700">
-              <li><a href="tel:+254700000001" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">+254 700 000 001</a></li>
-              <li><a href="tel:+254700000002" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">+254 700 000 002</a></li>
-              <li><a href="tel:+254700000003" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">+254 700 000 003</a></li>
+              <li><a href="tel:+254700000001" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">+254 743 667 995</a></li>
+              <li><a href="tel:+254700000002" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">+254 745 253 664</a></li>
             </ul>
           </motion.div>
 
@@ -81,7 +80,7 @@ const page = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-xl font-bold mb-4">Address</h2>
-            <p className="text-gray-700 hover:text-[#ff073a] transition-colors duration-300">1234 Main Street,<br />Kisumu, Kenya</p>
+            <p className="text-gray-700 hover:text-[#ff073a] transition-colors duration-300">Nairobi, Kenya</p>
           </motion.div>
 
           {/* Email */}
@@ -93,8 +92,8 @@ const page = () => {
           >
             <h2 className="text-xl font-bold mb-4">Email</h2>
             <ul className="space-y-2 text-gray-700">
-              <li><a href="mailto:info@example.com" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">info@example.com</a></li>
-              <li><a href="mailto:support@example.com" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">support@example.com</a></li>
+              <li><a href="mailto:info@example.com" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">contact@colab.co.ke</a></li>
+              <li><a href="mailto:support@example.com" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">hello@daniel.co.ke</a></li>
             </ul>
           </motion.div>
 

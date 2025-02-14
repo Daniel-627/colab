@@ -38,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[200vh] lg:h-[300vh]">
+    <div className="relative w-full h-[200vh] md:h-[150vh] lg:h-[300vh]">
       {/* Background Image */}
       <motion.div
         className="absolute inset-0"

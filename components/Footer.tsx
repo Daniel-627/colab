@@ -75,8 +75,8 @@ const Footer: React.FC = () => {
             </div>
             <div className="mt-6 space-y-4">
               <h3 className="text-lg font-semibold">Contact Us</h3>
-              <p><a href="mailto:info@company.com" className="hover:text-[#ff073a] hover:underline">info@company.com</a></p>
-              <p className='hover:text-[#ff073a] hover:underline'>1234 Example Street, Kisumu, Kenya</p>
+              <p><a href="mailto:info@company.com" className="hover:text-[#ff073a] hover:underline">contact@colab.co.ke</a></p>
+              <p className='hover:text-[#ff073a] hover:underline'>Nairobi, Kenya</p>
               <div className="flex space-x-4 mt-4">
                 <a
                   href="https://facebook.com"
