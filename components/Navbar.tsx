@@ -163,7 +163,7 @@ const Navbar = () => {
             }}
           >
             <motion.a
-              href="https://twitter.com"
+              href="https://x.com/ColabKe"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-black transition-colors duration-500"
@@ -174,7 +174,7 @@ const Navbar = () => {
               <FaXTwitter />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/colabstudioske"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-blue-700 transition-colors duration-500"
@@ -185,7 +185,7 @@ const Navbar = () => {
               <FaLinkedin />
             </motion.a>
             <motion.a
-              href="https://wa.me"
+              href="https://wa.me/254743667995"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-green-500 transition-colors duration-500"

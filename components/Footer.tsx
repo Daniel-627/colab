@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
               <p className='hover:text-[#ff073a] hover:underline'>Nairobi, Kenya</p>
               <div className="flex space-x-4 mt-4">
                 <a
-                  href="https://facebook.com"
+                  href="https://web.facebook.com/people/Colab-Studios/61571896272383/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                   <FaFacebookF size={20} />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://x.com/ColabKe"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
                   <FaXTwitter size={20} />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/colabke/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-pink-500 transition-colors duration-200"
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
                   <FaInstagram size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/colabstudioske"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-700 transition-colors duration-200"

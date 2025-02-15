@@ -5,6 +5,7 @@ import {
   FaTwitter, FaLinkedin, FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaSnapchat,
   FaTiktok,
   FaDribbble,
+  FaWhatsappSquare,
 } from 'react-icons/fa';
 import EmailForm from '@/components/EmailForm';
 import { motion } from 'framer-motion';
@@ -109,23 +110,23 @@ const page = () => {
           >
             <h2 className="text-xl font-bold mb-4">Social Networks</h2>
             <div className="grid grid-cols-3 gap-4">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-400">
+              <a href="https://x.com/ColabKe" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-400">
                 <FaXTwitter />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-700">
+              <a href="https://www.linkedin.com/company/colabstudioske" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-700">
                 <FaLinkedin />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-600">
+              <a href="https://web.facebook.com/people/Colab-Studios/61571896272383/" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-600">
                 <FaFacebook />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-pink-500">
+              <a href="https://www.instagram.com/colabke/" target="_blank" rel="noopener noreferrer" className="text-2xl text-pink-500">
                 <FaInstagram />
               </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-red-500">
+              <a href="https://www.tiktok.com/@colabke?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="text-2xl text-red-500">
                 <FaTiktok />
               </a>
-              <a href="https://dribble.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-yellow-400">
-                <FaDribbble />
+              <a href="https://wa.me/254743667995" target="_blank" rel="noopener noreferrer" className="text-2xl text-red-500">
+                <FaWhatsappSquare />
               </a>
             </div>
           </motion.div>
