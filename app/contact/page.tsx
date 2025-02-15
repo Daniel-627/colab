@@ -3,11 +3,14 @@
 import React from 'react';
 import {
   FaTwitter, FaLinkedin, FaWhatsapp, FaFacebook, FaInstagram, FaYoutube, FaPinterest, FaSnapchat,
+  FaTiktok,
+  FaDribbble,
 } from 'react-icons/fa';
 import EmailForm from '@/components/EmailForm';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import StartProject from '../../components/StartProject';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const page = () => {
   return (
@@ -92,8 +95,8 @@ const page = () => {
           >
             <h2 className="text-xl font-bold mb-4">Email</h2>
             <ul className="space-y-2 text-gray-700">
-              <li><a href="mailto:info@example.com" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">contact@colab.co.ke</a></li>
-              <li><a href="mailto:support@example.com" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">hello@daniel.co.ke</a></li>
+              <li><a href="mailto:contact@colab.co.ke" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">contact@colab.co.ke</a></li>
+              <li><a href="mailto:hello@daniel.co.ke" className="hover:underline hover:text-[#ff073a] transition-colors duration-300">hello@daniel.co.ke</a></li>
             </ul>
           </motion.div>
 
@@ -105,9 +108,9 @@ const page = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-xl font-bold mb-4">Social Networks</h2>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-400">
-                <FaTwitter />
+                <FaXTwitter />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-blue-700">
                 <FaLinkedin />
@@ -118,17 +121,11 @@ const page = () => {
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-pink-500">
                 <FaInstagram />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-red-600">
-                <FaYoutube />
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-red-500">
+                <FaTiktok />
               </a>
-              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-red-500">
-                <FaPinterest />
-              </a>
-              <a href="https://snapchat.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-yellow-400">
-                <FaSnapchat />
-              </a>
-              <a href="https://wa.me" target="_blank" rel="noopener noreferrer" className="text-2xl text-green-500">
-                <FaWhatsapp />
+              <a href="https://dribble.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-yellow-400">
+                <FaDribbble />
               </a>
             </div>
           </motion.div>
